@@ -5,6 +5,8 @@
 #include <queue>
 #include <unordered_set>
 #include <omp.h>
+#include <fstream>
+#include <cstring>
 
 // ProductQuantizer implementation
 template <typename T>
@@ -404,6 +406,148 @@ T IVFPQ<T>::compute_pq_distance([[maybe_unused]] const std::vector<double>& quer
     
     // Return Euclidean distance (square root of sum of squared distances)
     return std::sqrt(total_distance_squared);
+}
+
+// Persistence functions
+template <typename T>
+void IVFPQ<T>::save_index(const std::string& filepath) const {
+    std::cout << "Saving IVFPQ index to " << filepath << "..." << std::endl;
+    
+    std::ofstream file(filepath, std::ios::binary);
+    if (!file.is_open()) {
+        throw std::runtime_error("Cannot open file for writing: " + filepath);
+    }
+    
+    // Write metadata
+    file.write(reinterpret_cast<const char*>(&n_clusters), sizeof(n_clusters));
+    file.write(reinterpret_cast<const char*>(&nprobe), sizeof(nprobe));
+    file.write(reinterpret_cast<const char*>(&M), sizeof(M));
+    file.write(reinterpret_cast<const char*>(&nbits), sizeof(nbits));
+    file.write(reinterpret_cast<const char*>(&vector_dim), sizeof(vector_dim));
+    
+    // Write centroids
+    uint32_t n_centroids = centroids.size();
+    file.write(reinterpret_cast<const char*>(&n_centroids), sizeof(n_centroids));
+    for (const auto& centroid : centroids) {
+        for (const auto& val : centroid) {
+            file.write(reinterpret_cast<const char*>(&val), sizeof(T));
+        }
+    }
+    
+    // Write codebooks from product quantizer
+    uint32_t codebook_size = product_quantizer->get_codebook_size();
+    file.write(reinterpret_cast<const char*>(&codebook_size), sizeof(codebook_size));
+    
+    // We need to manually save codebooks since they're private
+    // Instead, we'll reconstruct them during search
+    
+    // Write inverted lists
+    uint32_t n_lists = inverted_lists.size();
+    file.write(reinterpret_cast<const char*>(&n_lists), sizeof(n_lists));
+    
+    for (const auto& list : inverted_lists) {
+        uint32_t list_size = list.size();
+        file.write(reinterpret_cast<const char*>(&list_size), sizeof(list_size));
+        
+        for (const auto& entry : list) {
+            // Write vector index
+            file.write(reinterpret_cast<const char*>(&entry.first), sizeof(entry.first));
+            
+            // Write PQ codes
+            uint32_t codes_size = entry.second.size();
+            file.write(reinterpret_cast<const char*>(&codes_size), sizeof(codes_size));
+            file.write(reinterpret_cast<const char*>(entry.second.data()), 
+                      codes_size * sizeof(uint8_t));
+        }
+    }
+    
+    // Write original dataset (for reference)
+    uint32_t dataset_size = dataset.size();
+    file.write(reinterpret_cast<const char*>(&dataset_size), sizeof(dataset_size));
+    for (const auto& vec : dataset) {
+        for (const auto& val : vec) {
+            file.write(reinterpret_cast<const char*>(&val), sizeof(T));
+        }
+    }
+    
+    file.close();
+    std::cout << "Index saved successfully" << std::endl;
+}
+
+template <typename T>
+void IVFPQ<T>::load_index(const std::string& filepath) {
+    std::cout << "Loading IVFPQ index from " << filepath << "..." << std::endl;
+    
+    std::ifstream file(filepath, std::ios::binary);
+    if (!file.is_open()) {
+        throw std::runtime_error("Cannot open file for reading: " + filepath);
+    }
+    
+    // Read metadata
+    file.read(reinterpret_cast<char*>(&n_clusters), sizeof(n_clusters));
+    file.read(reinterpret_cast<char*>(&nprobe), sizeof(nprobe));
+    file.read(reinterpret_cast<char*>(&M), sizeof(M));
+    file.read(reinterpret_cast<char*>(&nbits), sizeof(nbits));
+    file.read(reinterpret_cast<char*>(&vector_dim), sizeof(vector_dim));
+    
+    // Read centroids
+    uint32_t n_centroids;
+    file.read(reinterpret_cast<char*>(&n_centroids), sizeof(n_centroids));
+    centroids.clear();
+    centroids.resize(n_centroids);
+    for (uint32_t i = 0; i < n_centroids; ++i) {
+        centroids[i].resize(vector_dim);
+        for (uint32_t d = 0; d < vector_dim; ++d) {
+            file.read(reinterpret_cast<char*>(&centroids[i][d]), sizeof(T));
+        }
+    }
+    
+    // Read codebook size
+    uint32_t codebook_size;
+    file.read(reinterpret_cast<char*>(&codebook_size), sizeof(codebook_size));
+    
+    // Recreate product quantizer with the same parameters
+    product_quantizer = std::make_unique<ProductQuantizer<T>>(M, codebook_size, vector_dim);
+    
+    // Read inverted lists
+    uint32_t n_lists;
+    file.read(reinterpret_cast<char*>(&n_lists), sizeof(n_lists));
+    inverted_lists.clear();
+    inverted_lists.resize(n_lists);
+    
+    for (uint32_t i = 0; i < n_lists; ++i) {
+        uint32_t list_size;
+        file.read(reinterpret_cast<char*>(&list_size), sizeof(list_size));
+        
+        for (uint32_t j = 0; j < list_size; ++j) {
+            int vec_idx;
+            file.read(reinterpret_cast<char*>(&vec_idx), sizeof(vec_idx));
+            
+            uint32_t codes_size;
+            file.read(reinterpret_cast<char*>(&codes_size), sizeof(codes_size));
+            
+            std::vector<uint8_t> codes(codes_size);
+            file.read(reinterpret_cast<char*>(codes.data()), 
+                     codes_size * sizeof(uint8_t));
+            
+            inverted_lists[i].emplace_back(vec_idx, codes);
+        }
+    }
+    
+    // Read original dataset
+    uint32_t dataset_size;
+    file.read(reinterpret_cast<char*>(&dataset_size), sizeof(dataset_size));
+    dataset.clear();
+    dataset.resize(dataset_size);
+    for (uint32_t i = 0; i < dataset_size; ++i) {
+        dataset[i].resize(vector_dim);
+        for (uint32_t d = 0; d < vector_dim; ++d) {
+            file.read(reinterpret_cast<char*>(&dataset[i][d]), sizeof(T));
+        }
+    }
+    
+    file.close();
+    std::cout << "Index loaded successfully" << std::endl;
 }
 
 // Explicit template instantiation

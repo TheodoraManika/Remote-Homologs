@@ -68,6 +68,10 @@ public:
     std::list<std::pair<int, T>> search_k_nearest(const std::vector<T>& query, uint32_t k) const;
     std::list<std::pair<int, T>> range_search(const std::vector<T>& query, T radius) const;
     
+    // Persistence functions
+    void save_index(const std::string& filepath) const;
+    void load_index(const std::string& filepath);
+    
 private:
     // Helper functions
     std::vector<int> find_nearest_clusters(const std::vector<T>& query, uint32_t n_clusters_to_find) const;
