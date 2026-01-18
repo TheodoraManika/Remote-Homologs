@@ -1,0 +1,1044 @@
+Query Protein: A0A009I3Y5
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q5UPN5|YL180_MIMIV | 0.48    | 7            % | No              | Potential False Positive
+2    | sp|Q7U5M8|HIS61_PARMW | 0.66    | 9            % | No              | Potential False Positive
+3    | sp|Q9FE20|PBS1_ARATH | 0.19    | 29           % | Yes             | Remote homolog? (Shared Pfam)
+4    | sp|P0A4T8|TIPA_STRCO | 0.17    | 34           % | Yes             | Remote homolog? (Shared Pfam)
+5    | sp|Q65VC0|RNPA_MANSM | 0.61    | 9            % | No              | Potential False Positive
+6    | sp|B7KL75|GLMM_GLOC7 | 0.87    | 11           % | No              | Potential False Positive
+7    | sp|B7LAY7|UBIC_ECO55 | 0.59    | 7            % | No              | Potential False Positive
+8    | sp|Q8R882|HISX_CALS4 | 0.23    | 42           % | Yes             | --
+9    | sp|Q58122|G1PDH_METJA | 0.26    | 58           % | Yes             | --
+10   | sp|A6QKH8|PCP_STAAE | 0.49    | 15           % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q4G397|ATPA_EMIHU | 0.76    | 5            % | No              | Potential False Positive
+2    | sp|B9MDZ9|RPPH_ACIET | 0.61    | 8            % | No              | Potential False Positive
+3    | sp|P0C803|PSMA3_STAA2 | 0.82    | 14           % | No              | Potential False Positive
+4    | sp|Q9W0P5|GALE_DROME | 0.38    | 70           % | Yes             | --
+5    | sp|Q0K971|HISZ_CUPNH | 0.68    | 13           % | No              | Potential False Positive
+6    | sp|A0K913|NUOK_BURCH | 0.59    | 8            % | No              | Potential False Positive
+7    | sp|Q3E8L3|FBD36_ARATH | 0.79    | 12           % | No              | Potential False Positive
+8    | sp|Q65CC7|KANE_STRKN | 0.72    | 8            % | No              | Potential False Positive
+9    | sp|A4VHH5|Y721_STUS1 | 0.43    | 6            % | No              | Potential False Positive
+10   | sp|Q7ZV82|RL27_DANRE | 0.51    | 9            % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P57255|NUOE_BUCAI | 0.45    | 13           % | No              | Potential False Positive
+2    | sp|A6T170|KDSB_JANMA | 0.11    | 51           % | Yes             | --
+3    | sp|B8GQ83|SELO_THISH | 0.58    | 14           % | No              | Potential False Positive
+4    | sp|Q0SN14|RL6_BORAP | 0.11    | 56           % | Yes             | --
+5    | sp|B0CL06|RSMA_BRUSI | 0.19    | 60           % | Yes             | --
+6    | sp|B0XNL6|AGDC_ASPFC | 0.58    | 9            % | No              | Potential False Positive
+7    | sp|P9WEN3|CEUM2_CERUI | 0.44    | 11           % | No              | Potential False Positive
+8    | sp|Q6LPK2|LOLD_PHOPR | 0.87    | 5            % | No              | Potential False Positive
+9    | sp|P02526|CRGB_BOVIN | 0.54    | 6            % | No              | Potential False Positive
+10   | sp|Q8THS6|MFNB_METAC | 0.84    | 11           % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q2LQA9|RL24_SYNAS | 0.24    | 88           % | Yes             | --
+2    | sp|Q9RT23|FABH1_DEIRA | 0.80    | 8            % | No              | Potential False Positive
+3    | sp|Q9WTQ1|KPCD1_RAT | 0.84    | 13           % | No              | Potential False Positive
+4    | sp|Q6AZ60|EGFL7_RAT | 0.50    | 12           % | No              | Potential False Positive
+5    | sp|Q5L5F4|AROA_CHLAB | 0.83    | 6            % | No              | Potential False Positive
+6    | sp|P60150|PSBL_SPIOL | 0.67    | 15           % | No              | Potential False Positive
+7    | sp|Q8R882|HISX_CALS4 | 0.39    | 66           % | Yes             | --
+8    | sp|A2RC20|RS3_STRPG | 0.62    | 8            % | No              | Potential False Positive
+9    | sp|Q17QZ8|B3GN9_BOVIN | 0.79    | 13           % | No              | Potential False Positive
+10   | sp|Q2JWB4|NDHI_SYNJA | 0.42    | 9            % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B2I7P4|DXR_XYLF2 | 0.48    | 6            % | No              | Potential False Positive
+2    | sp|B1A915|PSBA_CARPA | 0.45    | 10           % | No              | Potential False Positive
+3    | sp|C5C0I6|RL22_BEUC1 | 0.77    | 10           % | No              | Potential False Positive
+4    | sp|C1AHR4|RL17_MYCBT | 0.87    | 9            % | No              | Potential False Positive
+5    | sp|Q63E45|PHNW_BACCZ | 0.80    | 11           % | No              | Potential False Positive
+6    | sp|B5F161|AROA_SALA4 | 0.88    | 14           % | No              | Potential False Positive
+7    | sp|Q28U74|SUCC_JANSC | 0.63    | 10           % | No              | Potential False Positive
+8    | sp|Q2Y7A9|IHFB_NITMU | 0.58    | 6            % | No              | Potential False Positive
+9    | sp|Q057X8|RS20_BUCCC | 0.56    | 7            % | No              | Potential False Positive
+10   | sp|P79945|PSP24_XENLA | 0.61    | 10           % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A009PCK4
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P26772|CH10_RAT | 0.67    | 12           % | No              | Potential False Positive
+2    | sp|P0A8B5|YBAB_ECOLI | 0.70    | 6            % | No              | Potential False Positive
+3    | sp|Q57QD7|LOLD_SALCH | 0.49    | 8            % | No              | Potential False Positive
+4    | sp|B5RBY0|YEGS_SALG2 | 0.37    | 24           % | Yes             | Remote homolog? (Shared Pfam)
+5    | sp|Q1PER6|APX2_ARATH | 0.63    | 10           % | No              | Potential False Positive
+6    | sp|A2SK91|RS20_METPP | 0.69    | 10           % | No              | Potential False Positive
+7    | sp|Q9R0J8|LGMN_RAT | 0.85    | 15           % | No              | Potential False Positive
+8    | sp|Q59P39|EFH1_CANAL | 0.84    | 5            % | No              | Potential False Positive
+9    | sp|A7H5K0|RS9_CAMJD | 0.21    | 74           % | Yes             | --
+10   | sp|O29828|Y419_ARCFU | 0.14    | 42           % | Yes             | --
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q49Z43|SCED3_STAS1 | 0.51    | 11           % | No              | Potential False Positive
+2    | sp|A8AYF6|YABA_STRGC | 0.89    | 6            % | No              | Potential False Positive
+3    | sp|P9WGV9|RUVC_MYCTU | 0.81    | 11           % | No              | Potential False Positive
+4    | sp|O05643|RL15_SULAC | 0.74    | 12           % | No              | Potential False Positive
+5    | sp|C5FTT1|XYL2_ARTOC | 0.64    | 9            % | No              | Potential False Positive
+6    | sp|Q088P1|ZAPB_SHEFN | 0.26    | 90           % | Yes             | --
+7    | sp|A3QFF6|QUEA_SHELP | 0.53    | 9            % | No              | Potential False Positive
+8    | sp|Q9BGP6|LRRT3_MACFA | 0.71    | 6            % | No              | Potential False Positive
+9    | sp|Q8BX07|CTDS2_MOUSE | 0.74    | 15           % | No              | Potential False Positive
+10   | sp|Q96H22|CENPN_HUMAN | 0.48    | 6            % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q71ZB5|GSA1_LISMF | 0.81    | 10           % | No              | Potential False Positive
+2    | sp|Q83SM0|PANC_SHIFL | 0.63    | 7            % | No              | Potential False Positive
+3    | sp|P53309|AP18B_YEAST | 0.42    | 9            % | No              | Potential False Positive
+4    | sp|A1RJ56|HSCA_SHESW | 0.57    | 8            % | No              | Potential False Positive
+5    | sp|B5VF36|MPH3_YEAS6 | 0.25    | 52           % | Yes             | --
+6    | sp|P76017|YCGV_ECOLI | 0.35    | 56           % | Yes             | --
+7    | sp|Q2SWZ5|RRF_BURTA | 0.50    | 5            % | No              | Potential False Positive
+8    | sp|Q9HUU1|OADC_PSEAE | 0.60    | 9            % | No              | Potential False Positive
+9    | sp|A0LHM4|PNP_SYNFM | 0.81    | 7            % | No              | Potential False Positive
+10   | sp|D0P1B2|SFI8_PHYIT | 0.71    | 12           % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q82TP9|MINC_NITEU | 0.67    | 9            % | No              | Potential False Positive
+2    | sp|Q3J2P4|LIPA_CERS4 | 0.90    | 5            % | No              | Potential False Positive
+3    | sp|A9TND9|CYNS_PHYPA | 0.37    | 51           % | Yes             | --
+4    | sp|P77788|NUDG_ECOLI | 0.57    | 15           % | No              | Potential False Positive
+5    | sp|B7UQ55|YMGG_ECO27 | 0.51    | 7            % | No              | Potential False Positive
+6    | sp|A0A8V0ZB02|TM63B_CHICK | 0.80    | 8            % | No              | Potential False Positive
+7    | sp|P69921|CSRA2_PSESM | 0.60    | 11           % | No              | Potential False Positive
+8    | sp|Q7TTT6|CH602_PARMW | 0.63    | 5            % | No              | Potential False Positive
+9    | sp|Q88421|ORF12_SPV1C | 0.68    | 11           % | No              | Potential False Positive
+10   | sp|Q28S88|SYR_JANSC | 0.74    | 8            % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|A7H1H2|FMT_CAMJD | 0.71    | 6            % | No              | Potential False Positive
+2    | sp|P58706|FYRI_ANTEL | 0.51    | 14           % | No              | Potential False Positive
+3    | sp|P44847|FTSP_HAEIN | 0.66    | 12           % | No              | Potential False Positive
+4    | sp|A5GVQ6|PEBB_SYNR3 | 0.44    | 8            % | No              | Potential False Positive
+5    | sp|Q196W2|VF439_IIV3 | 0.22    | 43           % | Yes             | --
+6    | sp|Q88EA5|Y4561_PSEPK | 0.90    | 14           % | No              | Potential False Positive
+7    | sp|Q04341|MIX14_YEAST | 0.26    | 36           % | Yes             | --
+8    | sp|Q5GX75|LEXA1_XANOR | 0.23    | 28           % | Yes             | Remote homolog? (Shared Pfam)
+9    | sp|C6DFE1|CUTC_PECCP | 0.75    | 12           % | No              | Potential False Positive
+10   | sp|Q6G570|IF3_BARHE | 0.77    | 15           % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A001
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q2JRJ5|PSBD_SYNJA | 0.88    | 14           % | No              | Potential False Positive
+2    | sp|Q7VJB1|Y332_HELHP | 0.78    | 15           % | No              | Potential False Positive
+3    | sp|Q9YTR7|SHUT_ADEP3 | 0.79    | 10           % | No              | Potential False Positive
+4    | sp|Q9D8V7|SC11C_MOUSE | 0.84    | 10           % | No              | Potential False Positive
+5    | sp|Q6GAB5|POTA_STAAS | 0.85    | 11           % | No              | Potential False Positive
+6    | sp|O60636|TSN2_HUMAN | 0.11    | 40           % | Yes             | --
+7    | sp|Q1CBP1|WZYE_YERPA | 0.83    | 6            % | No              | Potential False Positive
+8    | sp|Q8K9V5|RNT_BUCAP | 0.12    | 31           % | Yes             | Remote homolog? (Shared Pfam)
+9    | sp|Q6QMY5|ERR1_CANLF | 0.87    | 5            % | No              | Potential False Positive
+10   | sp|B1LDF3|SPRT_ECOSM | 0.74    | 6            % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B0S3A6|THIC_FINM2 | 0.62    | 11           % | No              | Potential False Positive
+2    | sp|O84350|RNZ_CHLTR | 0.89    | 9            % | No              | Potential False Positive
+3    | sp|A6WQ58|GH109_SHEB8 | 0.88    | 8            % | No              | Potential False Positive
+4    | sp|B1IGG5|RL1_CLOBK | 0.64    | 5            % | No              | Potential False Positive
+5    | sp|Q5Z2U2|PAND_NOCFA | 0.54    | 13           % | No              | Potential False Positive
+6    | sp|Q9PP70|GSA_CAMJE | 0.78    | 6            % | No              | Potential False Positive
+7    | sp|Q0AK62|PNP_MARMM | 0.63    | 13           % | No              | Potential False Positive
+8    | sp|Q7U5M8|HIS61_PARMW | 0.70    | 13           % | No              | Potential False Positive
+9    | sp|A1AHU6|ILVC_ECOK1 | 0.70    | 8            % | No              | Potential False Positive
+10   | sp|Q71UG0|HSP1_SMIPS | 0.16    | 38           % | Yes             | --
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q7VQI9|MURD_BLOFL | 0.16    | 24           % | Yes             | Remote homolog? (Shared Pfam)
+2    | sp|P0C1M8|O27A_CONRA | 0.45    | 7            % | No              | Potential False Positive
+3    | sp|A5UUP4|LEUD_ROSS1 | 0.88    | 12           % | No              | Potential False Positive
+4    | sp|P39753|FLHP_BACSU | 0.75    | 8            % | No              | Potential False Positive
+5    | sp|A3QVN6|HYAL_ECHPL | 0.41    | 9            % | No              | Potential False Positive
+6    | sp|Q49410|P37_MYCGE | 0.19    | 64           % | Yes             | --
+7    | sp|Q57KD8|FUCM_SALCH | 0.27    | 28           % | Yes             | Remote homolog? (Shared Pfam)
+8    | sp|P61009|SPCS3_HUMAN | 0.72    | 6            % | No              | Potential False Positive
+9    | sp|A4TSI0|VIAA_YERPP | 0.79    | 9            % | No              | Potential False Positive
+10   | sp|B5R571|EX7L_SALEP | 0.51    | 10           % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P0C7U9|FA87A_HUMAN | 0.81    | 15           % | No              | Potential False Positive
+2    | sp|B9DFI7|PMT2_ARATH | 0.86    | 6            % | No              | Potential False Positive
+3    | sp|P01868|IGHG1_MOUSE | 0.64    | 5            % | No              | Potential False Positive
+4    | sp|P04289|CEP3_HHV11 | 0.51    | 7            % | No              | Potential False Positive
+5    | sp|Q5J3M3|VR101_RAT | 0.54    | 6            % | No              | Potential False Positive
+6    | sp|Q9QAQ5|NS12_CVBOK | 0.82    | 5            % | No              | Potential False Positive
+7    | sp|Q8WNV3|MSTRO_MACFA | 0.67    | 13           % | No              | Potential False Positive
+8    | sp|Q2NIP7|SYC_AYWBP | 0.49    | 13           % | No              | Potential False Positive
+9    | sp|Q7VQI9|MURD_BLOFL | 0.27    | 41           % | Yes             | --
+10   | sp|Q5N294|GATB_SYNP6 | 0.60    | 15           % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q9ZV53|ATL49_ARATH | 0.77    | 12           % | No              | Potential False Positive
+2    | sp|A0AIH1|BUK_LISW6 | 0.39    | 44           % | Yes             | --
+3    | sp|Q74CG7|PANC_GEOSL | 0.68    | 12           % | No              | Potential False Positive
+4    | sp|O48776|RLF17_ARATH | 0.82    | 5            % | No              | Potential False Positive
+5    | sp|P0C7H7|MDTI_SALPA | 0.32    | 67           % | Yes             | --
+6    | sp|B1VYV9|RL19_STRGG | 0.58    | 5            % | No              | Potential False Positive
+7    | sp|P68409|MEL_VESVN | 0.22    | 91           % | Yes             | --
+8    | sp|Q8QGQ6|CLOCK_CHICK | 0.59    | 11           % | No              | Potential False Positive
+9    | sp|C1A067|RL35_RHOE4 | 0.65    | 14           % | No              | Potential False Positive
+10   | sp|A7GRH2|RIMM_BACCN | 0.50    | 9            % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A002
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q91X86|TMM98_MOUSE | 0.24    | 61           % | Yes             | --
+2    | sp|Q87JL6|PHNX_VIBPA | 0.89    | 11           % | No              | Potential False Positive
+3    | sp|Q28C60|LPCT4_XENTR | 0.23    | 34           % | Yes             | Remote homolog? (Shared Pfam)
+4    | sp|Q8RHY5|GLME_FUSNN | 0.44    | 5            % | No              | Potential False Positive
+5    | sp|P50973|NUON_RHOCA | 0.42    | 14           % | No              | Potential False Positive
+6    | sp|Q4K8K5|Y4336_PSEF5 | 0.88    | 8            % | No              | Potential False Positive
+7    | sp|Q9LYM3|LOR14_ARATH | 0.78    | 15           % | No              | Potential False Positive
+8    | sp|Q6R7C1|Y109_OSHVF | 0.63    | 12           % | No              | Potential False Positive
+9    | sp|Q56056|RNC_SALTY | 0.37    | 60           % | Yes             | --
+10   | sp|A5E0U1|RRP36_LODEL | 0.62    | 8            % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B5F7T3|RL5_SALA4 | 0.76    | 9            % | No              | Potential False Positive
+2    | sp|Q8Y7R4|Y1207_LISMO | 0.61    | 5            % | No              | Potential False Positive
+3    | sp|Q7MDL6|ADD_VIBVY | 0.53    | 13           % | No              | Potential False Positive
+4    | sp|A9MR84|YAAA_SALAR | 0.19    | 45           % | Yes             | --
+5    | sp|A0A023PXB0|YA019_YEAST | 0.85    | 9            % | No              | Potential False Positive
+6    | sp|B1JGB7|LIPA_YERPY | 0.85    | 6            % | No              | Potential False Positive
+7    | sp|P45964|YNZ4_CAEEL | 0.16    | 20           % | Yes             | Remote homolog? (Shared Pfam)
+8    | sp|Q7NRY9|RS18_CHRVO | 0.67    | 12           % | No              | Potential False Positive
+9    | sp|A5ISE7|SYP_STAA9 | 0.37    | 91           % | Yes             | --
+10   | sp|A4XKA4|DNAK_CALS8 | 0.64    | 5            % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q7VZX5|RL27_BORPE | 0.73    | 6            % | No              | Potential False Positive
+2    | sp|A8JHB7|FAP_CHLRE | 0.68    | 13           % | No              | Potential False Positive
+3    | sp|B1X6J3|TUSC_ECODH | 0.86    | 12           % | No              | Potential False Positive
+4    | sp|B5YTQ8|KEFG_ECO5E | 0.86    | 12           % | No              | Potential False Positive
+5    | sp|Q48DU7|GLYA1_PSE14 | 0.60    | 14           % | No              | Potential False Positive
+6    | sp|P17044|MTBF_BACIU | 0.57    | 14           % | No              | Potential False Positive
+7    | sp|Q4JB26|RRP4_SULAC | 0.55    | 12           % | No              | Potential False Positive
+8    | sp|Q8PU54|COFH1_METMA | 0.52    | 9            % | No              | Potential False Positive
+9    | sp|Q118K5|CCS1_TRIEI | 0.61    | 5            % | No              | Potential False Positive
+10   | sp|A6QIX8|LUXS_STAAE | 0.77    | 11           % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q9ABB6|PROB_CAUVC | 0.50    | 8            % | No              | Potential False Positive
+2    | sp|Q8F312|Y2599_LEPIN | 0.16    | 44           % | Yes             | --
+3    | sp|Q71WH7|ECFA1_LISMF | 0.80    | 13           % | No              | Potential False Positive
+4    | sp|B9MAC0|PSD_ACIET | 0.69    | 7            % | No              | Potential False Positive
+5    | sp|D2YVK5|LECM_NOTSC | 0.69    | 13           % | No              | Potential False Positive
+6    | sp|Q3B2F5|HPRK_CHLL3 | 0.17    | 74           % | Yes             | --
+7    | sp|Q8KAD1|PCKG_CHLTE | 0.79    | 7            % | No              | Potential False Positive
+8    | sp|P0A0N0|Y749_STAAM | 0.80    | 11           % | No              | Potential False Positive
+9    | sp|Q9CR75|TNR12_MOUSE | 0.78    | 9            % | No              | Potential False Positive
+10   | sp|Q1QJU5|MIAA_NITHX | 0.61    | 10           % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q2L068|MDH_BORA1 | 0.60    | 11           % | No              | Potential False Positive
+2    | sp|C3P5N7|SUCC_BACAA | 0.14    | 37           % | Yes             | --
+3    | sp|C3KXC6|EX7L_CLOB6 | 0.36    | 24           % | Yes             | Remote homolog? (Shared Pfam)
+4    | sp|P14982|REP_CLVK | 0.56    | 12           % | No              | Potential False Positive
+5    | sp|Q049F3|FPG_LACDB | 0.56    | 14           % | No              | Potential False Positive
+6    | sp|A4Y3Y9|NQRD_SHEPC | 0.78    | 15           % | No              | Potential False Positive
+7    | sp|B2UYB0|RL3_CLOBA | 0.74    | 6            % | No              | Potential False Positive
+8    | sp|B8J7G5|SSRP_ANAD2 | 0.11    | 62           % | Yes             | --
+9    | sp|Q46GU7|RL19_PROMT | 0.43    | 13           % | No              | Potential False Positive
+10   | sp|Q02481|Y3691_SHEFN | 0.63    | 5            % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A009HL96
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|O05395|YRHC_BACSU | 0.67    | 10           % | No              | Potential False Positive
+2    | sp|A4QBI2|RL23_CORGB | 0.45    | 5            % | No              | Potential False Positive
+3    | sp|B7NF02|YIDE_ECOLU | 0.78    | 7            % | No              | Potential False Positive
+4    | sp|G5EEM6|TAB1_CAEEL | 0.77    | 8            % | No              | Potential False Positive
+5    | sp|P04806|HXKA_YEAST | 0.44    | 9            % | No              | Potential False Positive
+6    | sp|P0CJ89|DU4L6_HUMAN | 0.19    | 80           % | Yes             | --
+7    | sp|A4W1V7|ATPB_STRS2 | 0.55    | 12           % | No              | Potential False Positive
+8    | sp|Q4L899|RL6_STAHJ | 0.21    | 64           % | Yes             | --
+9    | sp|P0DJ94|EXE1_HELHO | 0.86    | 7            % | No              | Potential False Positive
+10   | sp|Q73BV2|SPXH_BACC1 | 0.89    | 11           % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q8R751|SP5G_CALS4 | 0.60    | 5            % | No              | Potential False Positive
+2    | sp|Q49160|CH60_MYCFO | 0.85    | 10           % | No              | Potential False Positive
+3    | sp|P56914|NUOG2_RHIME | 0.88    | 9            % | No              | Potential False Positive
+4    | sp|Q65CP3|RS6_BACLD | 0.89    | 9            % | No              | Potential False Positive
+5    | sp|A0A291PQG3|UGT4_DACCO | 0.60    | 9            % | No              | Potential False Positive
+6    | sp|Q66IH2|TBRG1_XENTR | 0.53    | 5            % | No              | Potential False Positive
+7    | sp|Q92213|VPS34_CANAX | 0.64    | 15           % | No              | Potential False Positive
+8    | sp|B0TWR1|RIMP_FRAP2 | 0.53    | 14           % | No              | Potential False Positive
+9    | sp|Q3MBF3|RS2_TRIV2 | 0.68    | 12           % | No              | Potential False Positive
+10   | sp|A9LYA6|NU3C_ACOCI | 0.67    | 8            % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|O29866|DPHB_ARCFU | 0.75    | 13           % | No              | Potential False Positive
+2    | sp|P0AGD2|SODC_ECO57 | 0.67    | 12           % | No              | Potential False Positive
+3    | sp|Q5ZLN8|DDX55_CHICK | 0.41    | 10           % | No              | Potential False Positive
+4    | sp|Q6F0H9|RL31_MESFL | 0.84    | 14           % | No              | Potential False Positive
+5    | sp|Q06GU4|NU4LC_DRIGR | 0.54    | 7            % | No              | Potential False Positive
+6    | sp|Q80HV3|RUVV_VACCW | 0.74    | 8            % | No              | Potential False Positive
+7    | sp|P36889|SAHH_LEIDO | 0.79    | 12           % | No              | Potential False Positive
+8    | sp|Q96286|DCAM1_ARATH | 0.66    | 8            % | No              | Potential False Positive
+9    | sp|B1JRK6|DEOC_YERPY | 0.78    | 8            % | No              | Potential False Positive
+10   | sp|G4MRQ6|YTH1_PYRO7 | 0.90    | 12           % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q4K3A0|RSMG_PSEF5 | 0.45    | 7            % | No              | Potential False Positive
+2    | sp|Q3V4Q1|Y618_ATV | 0.63    | 15           % | No              | Potential False Positive
+3    | sp|Q54TR1|CFAD_DICDI | 0.67    | 7            % | No              | Potential False Positive
+4    | sp|Q54IJ2|CTLHA_DICDI | 0.72    | 10           % | No              | Potential False Positive
+5    | sp|O05958|Y744_RICPR | 0.50    | 6            % | No              | Potential False Positive
+6    | sp|P86306|TLP9_PHONI | 0.71    | 14           % | No              | Potential False Positive
+7    | sp|M1UZ09|TERF_TOLAL | 0.59    | 9            % | No              | Potential False Positive
+8    | sp|Q2MIJ3|PSBM_SOLBU | 0.83    | 6            % | No              | Potential False Positive
+9    | sp|B0TR00|NQRD_SHEHH | 0.86    | 5            % | No              | Potential False Positive
+10   | sp|B5XS77|Y3252_KLEP3 | 0.63    | 12           % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P08570|RLA1_DROME | 0.45    | 6            % | No              | Potential False Positive
+2    | sp|C0ZC77|SCPB_BREBN | 0.71    | 14           % | No              | Potential False Positive
+3    | sp|A3PFH8|PYRG_PROM0 | 0.50    | 15           % | No              | Potential False Positive
+4    | sp|O74557|NCB5R_SCHPO | 0.23    | 61           % | Yes             | --
+5    | sp|A1SRU1|RBSD_PSYIN | 0.75    | 13           % | No              | Potential False Positive
+6    | sp|Q0I208|UBIB_HISS1 | 0.19    | 94           % | Yes             | --
+7    | sp|P0CY39|RS23A_NAUCA | 0.61    | 10           % | No              | Potential False Positive
+8    | sp|P52658|AMPR_CITKO | 0.63    | 5            % | No              | Potential False Positive
+9    | sp|B1YRW3|HIS2_BURA4 | 0.76    | 11           % | No              | Potential False Positive
+10   | sp|B2SS98|COAX_XANOP | 0.46    | 11           % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A009HLV9
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P0DQV4|TX1A_PELMU | 0.70    | 7            % | No              | Potential False Positive
+2    | sp|A1A8L2|GCS2_ECOK1 | 0.59    | 12           % | No              | Potential False Positive
+3    | sp|A9R3V0|URE1_YERPG | 0.55    | 9            % | No              | Potential False Positive
+4    | sp|Q4UN76|YIDC_RICFE | 0.12    | 66           % | Yes             | --
+5    | sp|Q9M2H8|MCC27_ARATH | 0.54    | 10           % | No              | Potential False Positive
+6    | sp|B2IK87|RS9_BEII9 | 0.45    | 10           % | No              | Potential False Positive
+7    | sp|Q5N2J2|PSBH_SYNP6 | 0.76    | 14           % | No              | Potential False Positive
+8    | sp|Q556N5|ADRM1_DICDI | 0.86    | 9            % | No              | Potential False Positive
+9    | sp|Q2IXR1|RS10_RHOP2 | 0.41    | 14           % | No              | Potential False Positive
+10   | sp|B7LKB2|HSCB_ESCF3 | 0.11    | 87           % | Yes             | --
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|O83050|Y004_TREPA | 0.43    | 14           % | No              | Potential False Positive
+2    | sp|P47094|YJZ3_YEAST | 0.83    | 12           % | No              | Potential False Positive
+3    | sp|B7NAR4|LPXK_ECOLU | 0.59    | 11           % | No              | Potential False Positive
+4    | sp|Q6UXP3|TM14E_HUMAN | 0.66    | 9            % | No              | Potential False Positive
+5    | sp|P0CAY2|DEF53_ARATH | 0.59    | 9            % | No              | Potential False Positive
+6    | sp|P56580|PTHB_ECOLI | 0.63    | 5            % | No              | Potential False Positive
+7    | sp|P81709|LYSC2_CANLF | 0.57    | 13           % | No              | Potential False Positive
+8    | sp|Q7W1Q9|SECB_BORPA | 0.23    | 33           % | Yes             | Remote homolog? (Shared Pfam)
+9    | sp|A4YBF5|XERC_SHEPC | 0.81    | 15           % | No              | Potential False Positive
+10   | sp|B7M755|MOAC_ECO8A | 0.65    | 9            % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B1H285|KBTB8_RAT | 0.39    | 62           % | Yes             | --
+2    | sp|Q0TFU2|MGLA_ECOL5 | 0.74    | 7            % | No              | Potential False Positive
+3    | sp|A6VCW0|PUR9_PSEP7 | 0.61    | 5            % | No              | Potential False Positive
+4    | sp|B0T274|MSCL_CAUSK | 0.50    | 7            % | No              | Potential False Positive
+5    | sp|Q7N126|LEUD_PHOLL | 0.78    | 12           % | No              | Potential False Positive
+6    | sp|O22900|WRK23_ARATH | 0.69    | 14           % | No              | Potential False Positive
+7    | sp|Q98F75|RUVA_RHILO | 0.42    | 12           % | No              | Potential False Positive
+8    | sp|Q7VQK8|DAPB_BLOFL | 0.21    | 38           % | Yes             | --
+9    | sp|O83980|SYA_TREPA | 0.11    | 70           % | Yes             | --
+10   | sp|Q17QE0|F241A_BOVIN | 0.80    | 15           % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q39XY2|RS13_GEOMG | 0.65    | 12           % | No              | Potential False Positive
+2    | sp|P51547|SODE_HAECO | 0.62    | 8            % | No              | Potential False Positive
+3    | sp|Q6F358|PLA6_ORYSJ | 0.65    | 11           % | No              | Potential False Positive
+4    | sp|Q72WF4|CAS2_NITV2 | 0.67    | 10           % | No              | Potential False Positive
+5    | sp|Q49411|Y294_MYCGE | 0.31    | 29           % | Yes             | Remote homolog? (Shared Pfam)
+6    | sp|A4YC85|CYOE2_SHEPC | 0.40    | 12           % | No              | Potential False Positive
+7    | sp|A0A1Y0BRF3|ADRE_PENRO | 0.45    | 10           % | No              | Potential False Positive
+8    | sp|P0C6G1|AC4_CLVK | 0.54    | 10           % | No              | Potential False Positive
+9    | sp|P48840|AGAB_VIBS7 | 0.86    | 13           % | No              | Potential False Positive
+10   | sp|P29314|RS9_RAT | 0.38    | 52           % | Yes             | --
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q6FTC4|SHO1_CANGA | 0.79    | 10           % | No              | Potential False Positive
+2    | sp|B0BBR8|MNMA_CHLTB | 0.71    | 10           % | No              | Potential False Positive
+3    | sp|Q66A90|AZOR_YERPS | 0.63    | 14           % | No              | Potential False Positive
+4    | sp|Q8PN36|PURT_XANAC | 0.48    | 7            % | No              | Potential False Positive
+5    | sp|Q88BW9|ATPL_PSEPK | 0.85    | 15           % | No              | Potential False Positive
+6    | sp|Q8DR26|MUTS2_STRR6 | 0.87    | 6            % | No              | Potential False Positive
+7    | sp|A1JI42|MURI_YERE8 | 0.70    | 12           % | No              | Potential False Positive
+8    | sp|P86315|OSTCN_LAMGU | 0.84    | 7            % | No              | Potential False Positive
+9    | sp|Q9HGN5|YO45_SCHPO | 0.62    | 5            % | No              | Potential False Positive
+10   | sp|Q13106|ZN154_HUMAN | 0.49    | 5            % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A009HN45
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q62000|MIME_MOUSE | 0.63    | 14           % | No              | Potential False Positive
+2    | sp|P61083|SYS_STAAM | 0.55    | 15           % | No              | Potential False Positive
+3    | sp|O55240|RDH5_MOUSE | 0.53    | 11           % | No              | Potential False Positive
+4    | sp|P07153|RPN1_RAT | 0.42    | 14           % | No              | Potential False Positive
+5    | sp|Q5U1Z2|TPPC3_RAT | 0.71    | 6            % | No              | Potential False Positive
+6    | sp|Q9PKA8|CLPC_CHLMU | 0.53    | 6            % | No              | Potential False Positive
+7    | sp|P52907|CAZA1_HUMAN | 0.60    | 14           % | No              | Potential False Positive
+8    | sp|Q9I4U2|QUIP_PSEAE | 0.88    | 11           % | No              | Potential False Positive
+9    | sp|Q1H497|SYP_METFK | 0.51    | 13           % | No              | Potential False Positive
+10   | sp|Q57RF9|UVRB_SALCH | 0.77    | 11           % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|O05947|SYT_RICPR | 0.42    | 8            % | No              | Potential False Positive
+2    | sp|C7U331|MATMC_SCHPM | 0.77    | 6            % | No              | Potential False Positive
+3    | sp|Q5NHV2|RL18_FRATT | 0.71    | 9            % | No              | Potential False Positive
+4    | sp|Q5DWG0|CRJ36_CRYJA | 0.48    | 6            % | No              | Potential False Positive
+5    | sp|Q93W22|RL103_ARATH | 0.46    | 13           % | No              | Potential False Positive
+6    | sp|Q0AZ43|HEM3_SYNWW | 0.66    | 11           % | No              | Potential False Positive
+7    | sp|P84671|PPK5_DERVE | 0.67    | 15           % | No              | Potential False Positive
+8    | sp|B2S9E5|MIAB_BRUA1 | 0.79    | 5            % | No              | Potential False Positive
+9    | sp|B4TWJ4|RS9_SALSV | 0.44    | 14           % | No              | Potential False Positive
+10   | sp|Q9FG01|ATO_ARATH | 0.52    | 10           % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|A1KRQ4|PYRD_NEIMF | 0.76    | 5            % | No              | Potential False Positive
+2    | sp|A5G8K8|RSMH_GEOUR | 0.66    | 9            % | No              | Potential False Positive
+3    | sp|Q8QL37|Y101_SIRV1 | 0.84    | 7            % | No              | Potential False Positive
+4    | sp|A7MBL8|PKN2_DANRE | 0.64    | 11           % | No              | Potential False Positive
+5    | sp|Q5I6K1|MATK_DIPAU | 0.25    | 37           % | Yes             | --
+6    | sp|P54438|YRKK_BACSU | 0.59    | 13           % | No              | Potential False Positive
+7    | sp|P12404|ATP6_NOSS1 | 0.40    | 6            % | No              | Potential False Positive
+8    | sp|Q7W0A6|MUTL_BORPE | 0.11    | 46           % | Yes             | --
+9    | sp|A4QJN8|RK22_AETGR | 0.13    | 30           % | Yes             | Remote homolog? (Shared Pfam)
+10   | sp|P17044|MTBF_BACIU | 0.81    | 13           % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B3EBB7|KATG_TRIL1 | 0.53    | 8            % | No              | Potential False Positive
+2    | sp|P0CV56|RL135_PLAVT | 0.70    | 5            % | No              | Potential False Positive
+3    | sp|Q2G636|QUEA_NOVAD | 0.56    | 10           % | No              | Potential False Positive
+4    | sp|Q9L2H4|ISPT1_STRCO | 0.16    | 61           % | Yes             | --
+5    | sp|B2K1W7|RHAT_YERPB | 0.69    | 13           % | No              | Potential False Positive
+6    | sp|B5R9V1|DEOB_SALG2 | 0.56    | 12           % | No              | Potential False Positive
+7    | sp|B0JSD9|RS10_MICAN | 0.21    | 22           % | Yes             | Remote homolog? (Shared Pfam)
+8    | sp|P50310|PGK1_CRIGR | 0.66    | 9            % | No              | Potential False Positive
+9    | sp|A0LHQ9|HTPX_SYNFM | 0.11    | 82           % | Yes             | --
+10   | sp|Q57J32|RL3_SALCH | 0.55    | 6            % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B2HNC7|AROK_MYCMM | 0.54    | 15           % | No              | Potential False Positive
+2    | sp|Q73SA5|RS17_MYCPA | 0.33    | 58           % | Yes             | --
+3    | sp|Q8X225|DIM5_NEUCR | 0.41    | 7            % | No              | Potential False Positive
+4    | sp|P68926|VXIS_BP434 | 0.33    | 88           % | Yes             | --
+5    | sp|P80291|MT2D_RABIT | 0.55    | 7            % | No              | Potential False Positive
+6    | sp|P21264|PUR6_YEAST | 0.82    | 5            % | No              | Potential False Positive
+7    | sp|B5FR81|HSCA_SALDC | 0.56    | 14           % | No              | Potential False Positive
+8    | sp|B1XTD4|Y318_POLNS | 0.62    | 9            % | No              | Potential False Positive
+9    | sp|C1CQ48|IF2_STRZT | 0.84    | 7            % | No              | Potential False Positive
+10   | sp|P44248|Y1543_HAEIN | 0.56    | 14           % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A009HQC9
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q6DF62|RGN_XENTR | 0.75    | 12           % | No              | Potential False Positive
+2    | sp|P31843|RRPO_OENBE | 0.67    | 8            % | No              | Potential False Positive
+3    | sp|P0AD96|LIVJ_ECOLI | 0.77    | 8            % | No              | Potential False Positive
+4    | sp|B7UR04|YTJA_ECO27 | 0.17    | 78           % | Yes             | --
+5    | sp|O28173|RIBB_ARCFU | 0.17    | 79           % | Yes             | --
+6    | sp|Q8XUX6|OPGD1_RALN1 | 0.24    | 81           % | Yes             | --
+7    | sp|P47827|CCNA2_XENLA | 0.82    | 5            % | No              | Potential False Positive
+8    | sp|P41131|AMYA_AERHY | 0.74    | 7            % | No              | Potential False Positive
+9    | sp|Q8Z9L4|CAIC_SALTI | 0.75    | 5            % | No              | Potential False Positive
+10   | sp|B3EWJ5|ALLC1_DELRA | 0.90    | 8            % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|A6LU48|DXS_CLOB8 | 0.81    | 13           % | No              | Potential False Positive
+2    | sp|Q3YVN6|ATPB_SHISS | 0.47    | 8            % | No              | Potential False Positive
+3    | sp|Q6FWN4|GPI18_CANGA | 0.30    | 60           % | Yes             | --
+4    | sp|Q8FJL3|FSAA_ECOL6 | 0.50    | 6            % | No              | Potential False Positive
+5    | sp|B6H9W0|DRE2_PENRW | 0.43    | 12           % | No              | Potential False Positive
+6    | sp|B1II44|RS15_CLOBK | 0.76    | 10           % | No              | Potential False Positive
+7    | sp|B1VEU3|RL16_CORU7 | 0.50    | 8            % | No              | Potential False Positive
+8    | sp|Q9PQY7|Y157_UREPA | 0.47    | 5            % | No              | Potential False Positive
+9    | sp|P60700|HPRK_STAAM | 0.78    | 13           % | No              | Potential False Positive
+10   | sp|P0C2P5|VSTX3_GRARO | 0.62    | 7            % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|C3NMG4|GUAAB_SACI1 | 0.76    | 12           % | No              | Potential False Positive
+2    | sp|O28173|RIBB_ARCFU | 0.37    | 89           % | Yes             | --
+3    | sp|Q24558|EXO1_DROME | 0.71    | 14           % | No              | Potential False Positive
+4    | sp|Q08412|CUE5_YEAST | 0.65    | 8            % | No              | Potential False Positive
+5    | sp|Q58776|CARB2_METJA | 0.36    | 69           % | Yes             | --
+6    | sp|F4JMH9|HSP57_ARATH | 0.61    | 8            % | No              | Potential False Positive
+7    | sp|B4SQH4|SYT_STRM5 | 0.71    | 8            % | No              | Potential False Positive
+8    | sp|Q57986|FEOB_METJA | 0.54    | 11           % | No              | Potential False Positive
+9    | sp|I1RF64|AURL2_GIBZE | 0.61    | 11           % | No              | Potential False Positive
+10   | sp|A1KC82|MSCL_AZOSB | 0.42    | 5            % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|A6TQC4|NADE_ALKMQ | 0.20    | 52           % | Yes             | --
+2    | sp|A6ZMC1|ARGJ_YEAS7 | 0.74    | 5            % | No              | Potential False Positive
+3    | sp|O51263|IXTPA_BORBU | 0.64    | 11           % | No              | Potential False Positive
+4    | sp|D2Y2Q9|VKTR1_CYRHA | 0.83    | 12           % | No              | Potential False Positive
+5    | sp|Q0HSK1|RS16_SHESR | 0.84    | 15           % | No              | Potential False Positive
+6    | sp|O94483|HSK3_SCHPO | 0.79    | 7            % | No              | Potential False Positive
+7    | sp|P0C1R5|LACA_STAAU | 0.43    | 14           % | No              | Potential False Positive
+8    | sp|Q03956|RAV2_YEAST | 0.65    | 5            % | No              | Potential False Positive
+9    | sp|Q02518|RBL_SYNSP | 0.76    | 14           % | No              | Potential False Positive
+10   | sp|B2IGF1|MRAZ_BEII9 | 0.78    | 5            % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B9L7U2|RECA_NAUPA | 0.59    | 12           % | No              | Potential False Positive
+2    | sp|P42884|AAD14_YEAST | 0.57    | 13           % | No              | Potential False Positive
+3    | sp|A5IMB1|RPOA_THEP1 | 0.20    | 72           % | Yes             | --
+4    | sp|A6U1W3|SCPB_STAA2 | 0.22    | 80           % | Yes             | --
+5    | sp|B9LJD7|RL22_CHLSY | 0.89    | 12           % | No              | Potential False Positive
+6    | sp|P10215|NEC1_HHV11 | 0.21    | 48           % | Yes             | --
+7    | sp|Q9GKQ9|SMAD4_PIG | 0.52    | 14           % | No              | Potential False Positive
+8    | sp|Q636F6|RPOZ_BACCZ | 0.45    | 11           % | No              | Potential False Positive
+9    | sp|O14185|STG1_SCHPO | 0.64    | 9            % | No              | Potential False Positive
+10   | sp|B1YHQ7|PAND_EXIS2 | 0.72    | 8            % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A009HPM0
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B5QYM1|HCP_SALEP | 0.53    | 11           % | No              | Potential False Positive
+2    | sp|A0LTK3|THIE_ACIC1 | 0.42    | 6            % | No              | Potential False Positive
+3    | sp|A8LK58|HIS3_DINSH | 0.27    | 33           % | Yes             | Remote homolog? (Shared Pfam)
+4    | sp|A0AT31|NLTP5_LENCU | 0.70    | 14           % | No              | Potential False Positive
+5    | sp|P42247|YCBO_BACSU | 0.81    | 15           % | No              | Potential False Positive
+6    | sp|Q6CDV6|RBD2_YARLI | 0.45    | 14           % | No              | Potential False Positive
+7    | sp|Q2QLB1|CAV2_HORSE | 0.62    | 7            % | No              | Potential False Positive
+8    | sp|G3FNQ9|SPAZ_ORBOL | 0.50    | 8            % | No              | Potential False Positive
+9    | sp|B2A4X5|GLSA_NATTJ | 0.75    | 5            % | No              | Potential False Positive
+10   | sp|Q7N2M5|UBIG_PHOLL | 0.61    | 6            % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P29052|TF2B_DROME | 0.87    | 8            % | No              | Potential False Positive
+2    | sp|Q5N492|DAPAT_SYNP6 | 0.77    | 11           % | No              | Potential False Positive
+3    | sp|B8E3L5|HUTI_SHEB2 | 0.48    | 10           % | No              | Potential False Positive
+4    | sp|Q07UZ6|ATPE_RHOP5 | 0.74    | 12           % | No              | Potential False Positive
+5    | sp|Q73BQ9|TRPC_BACC1 | 0.78    | 15           % | No              | Potential False Positive
+6    | sp|P66699|RPOA_LISMO | 0.78    | 10           % | No              | Potential False Positive
+7    | sp|A0KWB1|HIS4_SHESA | 0.42    | 8            % | No              | Potential False Positive
+8    | sp|O67619|PANE_AQUAE | 0.80    | 6            % | No              | Potential False Positive
+9    | sp|Q49Z08|ILVD1_STAS1 | 0.70    | 6            % | No              | Potential False Positive
+10   | sp|P9WKT6|Y500A_MYCTO | 0.61    | 13           % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P56864|SAT_DEIRA | 0.67    | 8            % | No              | Potential False Positive
+2    | sp|Q7A598|Y1443_STAAN | 0.84    | 11           % | No              | Potential False Positive
+3    | sp|A7MS61|FADJ_VIBC1 | 0.41    | 7            % | No              | Potential False Positive
+4    | sp|Q55G81|ERCC2_DICDI | 0.76    | 5            % | No              | Potential False Positive
+5    | sp|A1A094|RS11_BIFAA | 0.84    | 6            % | No              | Potential False Positive
+6    | sp|Q3SNV7|RIMM_NITWN | 0.89    | 10           % | No              | Potential False Positive
+7    | sp|O13857|PLB3_SCHPO | 0.15    | 58           % | Yes             | --
+8    | sp|Q47272|YLCG_ECOLI | 0.34    | 71           % | Yes             | --
+9    | sp|Q3ZBL5|PTH2_BOVIN | 0.73    | 8            % | No              | Potential False Positive
+10   | sp|A5UG47|TGT_HAEIG | 0.65    | 9            % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q1J4Y7|TSAD_STRPF | 0.75    | 11           % | No              | Potential False Positive
+2    | sp|B0S0Y9|RSMH_FINM2 | 0.83    | 9            % | No              | Potential False Positive
+3    | sp|Q7H8L5|PSBL_IPOCC | 0.65    | 9            % | No              | Potential False Positive
+4    | sp|P61037|LNT1_TREDE | 0.85    | 15           % | No              | Potential False Positive
+5    | sp|Q9KS02|MATP_VIBCH | 0.50    | 7            % | No              | Potential False Positive
+6    | sp|O35828|CORO7_RAT | 0.77    | 13           % | No              | Potential False Positive
+7    | sp|P28767|SODM_PETMA | 0.22    | 28           % | Yes             | Remote homolog? (Shared Pfam)
+8    | sp|Q5QX64|ZAPC_IDILO | 0.69    | 14           % | No              | Potential False Positive
+9    | sp|P75064|GLPK_MYCPN | 0.86    | 8            % | No              | Potential False Positive
+10   | sp|Q1W694|B1Q_LOXIN | 0.11    | 35           % | Yes             | --
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q47272|YLCG_ECOLI | 0.31    | 33           % | Yes             | Remote homolog? (Shared Pfam)
+2    | sp|O35439|MOT1_MERUN | 0.50    | 10           % | No              | Potential False Positive
+3    | sp|O13253|TWHH_DEVPA | 0.26    | 27           % | Yes             | Remote homolog? (Shared Pfam)
+4    | sp|B7JXS8|DNCH_RIPO1 | 0.12    | 79           % | Yes             | --
+5    | sp|Q5P4E4|ATPA_AROAE | 0.37    | 82           % | Yes             | --
+6    | sp|A7HUZ6|RUVC_PARL1 | 0.84    | 10           % | No              | Potential False Positive
+7    | sp|B7JXS8|DNCH_RIPO1 | 0.36    | 58           % | Yes             | --
+8    | sp|Q66H78|PXYP1_RAT | 0.19    | 92           % | Yes             | --
+9    | sp|E0SCY3|OUSX_DICD3 | 0.70    | 9            % | No              | Potential False Positive
+10   | sp|Q95028|LDH_DROME | 0.14    | 36           % | Yes             | --
+
+
+================================================================================
+
+Query Protein: A0A009IB02
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q6WN29|HBB_ALOBE | 0.48    | 10           % | No              | Potential False Positive
+2    | sp|C3NGA1|IF6_SACI1 | 0.49    | 6            % | No              | Potential False Positive
+3    | sp|Q76ZS0|RP18_VACCA | 0.65    | 10           % | No              | Potential False Positive
+4    | sp|O32031|YRRS_BACSU | 0.48    | 12           % | No              | Potential False Positive
+5    | sp|P22175|NCP_MSTV | 0.86    | 8            % | No              | Potential False Positive
+6    | sp|B5F7U9|LEU1_SALA4 | 0.45    | 9            % | No              | Potential False Positive
+7    | sp|Q32G47|YNFB_SHIDS | 0.50    | 7            % | No              | Potential False Positive
+8    | sp|Q1MMI4|UPPP_RHIJ3 | 0.78    | 13           % | No              | Potential False Positive
+9    | sp|Q5K2K6|PHOSP_ISFV | 0.50    | 7            % | No              | Potential False Positive
+10   | sp|B8JBS8|PURL_ANAD2 | 0.42    | 9            % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P0A7V9|RS4_ECOL6 | 0.61    | 13           % | No              | Potential False Positive
+2    | sp|Q88CZ6|HUTU_PSEPK | 0.85    | 10           % | No              | Potential False Positive
+3    | sp|Q9FK14|LEA50_ARATH | 0.71    | 6            % | No              | Potential False Positive
+4    | sp|C5CSM6|RS16_VARPS | 0.81    | 11           % | No              | Potential False Positive
+5    | sp|Q47F95|GLND_DECAR | 0.39    | 62           % | Yes             | --
+6    | sp|B2IRR4|SYI_STRPS | 0.77    | 15           % | No              | Potential False Positive
+7    | sp|P12928|KPYR_RAT | 0.67    | 13           % | No              | Potential False Positive
+8    | sp|Q31YB6|FADI_SHIBS | 0.86    | 14           % | No              | Potential False Positive
+9    | sp|A3DGI7|METAA_ACET2 | 0.66    | 9            % | No              | Potential False Positive
+10   | sp|Q9UY16|REG9_PYRAB | 0.47    | 15           % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q4FQ60|TATB_PSYA2 | 0.54    | 5            % | No              | Potential False Positive
+2    | sp|Q48VS6|RL36_STRPM | 0.64    | 13           % | No              | Potential False Positive
+3    | sp|P26524|NU4LC_SYNY3 | 0.78    | 13           % | No              | Potential False Positive
+4    | sp|B2UCW7|SECA_RALPJ | 0.57    | 12           % | No              | Potential False Positive
+5    | sp|B0SMJ9|RL28_LEPBP | 0.30    | 73           % | Yes             | --
+6    | sp|Q1MHJ6|GATC_RHIJ3 | 0.73    | 12           % | No              | Potential False Positive
+7    | sp|B6IQS5|ATPF1_RHOCS | 0.58    | 5            % | No              | Potential False Positive
+8    | sp|O59447|MPTA_PYRHO | 0.78    | 12           % | No              | Potential False Positive
+9    | sp|Q04632|COG8_YEAST | 0.60    | 7            % | No              | Potential False Positive
+10   | sp|B7L2N9|RL9_METC4 | 0.17    | 21           % | Yes             | Remote homolog? (Shared Pfam)
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B9LZC6|RUVC_GEODF | 0.89    | 5            % | No              | Potential False Positive
+2    | sp|Q5LGU6|LIPA_BACFN | 0.73    | 9            % | No              | Potential False Positive
+3    | sp|Q8GPG4|DDHA_RHOSU | 0.80    | 11           % | No              | Potential False Positive
+4    | sp|Q56056|RNC_SALTY | 0.86    | 9            % | No              | Potential False Positive
+5    | sp|Q70PR7|VINSY_RAUSE | 0.36    | 34           % | Yes             | Remote homolog? (Shared Pfam)
+6    | sp|O26330|GSA_METTH | 0.44    | 5            % | No              | Potential False Positive
+7    | sp|B8IT13|Y024_METNO | 0.61    | 10           % | No              | Potential False Positive
+8    | sp|Q9ZDS5|FTSQ_RICPR | 0.46    | 5            % | No              | Potential False Positive
+9    | sp|Q8PUQ3|DADD_METMA | 0.88    | 14           % | No              | Potential False Positive
+10   | sp|Q0T9N7|FRDC_ECOL5 | 0.60    | 8            % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q04BA6|ATPD_LACDB | 0.16    | 65           % | Yes             | --
+2    | sp|Q80ZN9|CX6B2_MOUSE | 0.63    | 15           % | No              | Potential False Positive
+3    | sp|Q69S39|UCRIA_ORYSJ | 0.52    | 15           % | No              | Potential False Positive
+4    | sp|Q87CW0|SYD_XYLFT | 0.74    | 5            % | No              | Potential False Positive
+5    | sp|A8A313|GUAA_ECOHS | 0.77    | 9            % | No              | Potential False Positive
+6    | sp|Q1XDL8|PREA_PYRYE | 0.52    | 8            % | No              | Potential False Positive
+7    | sp|A3PGM8|RS5_CERS1 | 0.21    | 84           % | Yes             | --
+8    | sp|Q82TU4|NUOB_NITEU | 0.86    | 10           % | No              | Potential False Positive
+9    | sp|P15640|PUR2_ECOLI | 0.69    | 12           % | No              | Potential False Positive
+10   | sp|A1WID5|MINE_VEREI | 0.81    | 12           % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A010Q3W2
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P0A1B3|ARGR_SALTY | 0.12    | 74           % | Yes             | --
+2    | sp|Q556N5|ADRM1_DICDI | 0.65    | 5            % | No              | Potential False Positive
+3    | sp|Q0N4U7|CJE1_CONPO | 0.12    | 24           % | Yes             | Remote homolog? (Shared Pfam)
+4    | sp|Q2IHZ3|ACPS_ANADE | 0.86    | 15           % | No              | Potential False Positive
+5    | sp|P9WLX7|Y1424_MYCTU | 0.81    | 13           % | No              | Potential False Positive
+6    | sp|Q8SR96|RL10_ENCCU | 0.43    | 6            % | No              | Potential False Positive
+7    | sp|O81893|ITPK2_ARATH | 0.71    | 13           % | No              | Potential False Positive
+8    | sp|O22652|CHSY_RAPSA | 0.43    | 11           % | No              | Potential False Positive
+9    | sp|Q89DD2|EX7L_BRADU | 0.76    | 14           % | No              | Potential False Positive
+10   | sp|O68104|CBIN_RHOCB | 0.80    | 9            % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q0CF74|AZPB3_ASPTN | 0.79    | 10           % | No              | Potential False Positive
+2    | sp|B7LNJ2|AAS_ESCF3 | 0.49    | 9            % | No              | Potential False Positive
+3    | sp|Q0N4U7|CJE1_CONPO | 0.22    | 72           % | Yes             | --
+4    | sp|P02052|HBB_TUPGL | 0.81    | 7            % | No              | Potential False Positive
+5    | sp|W5QJZ5|DIOX4_RUTGR | 0.82    | 7            % | No              | Potential False Positive
+6    | sp|P21207|LCRH_YERPE | 0.50    | 13           % | No              | Potential False Positive
+7    | sp|P28966|UL13_EHV1B | 0.69    | 12           % | No              | Potential False Positive
+8    | sp|Q04436|YMZ3_YEAST | 0.71    | 13           % | No              | Potential False Positive
+9    | sp|B7IP95|AROB_BACC2 | 0.68    | 14           % | No              | Potential False Positive
+10   | sp|Q5E2L7|HLDE_ALIF1 | 0.68    | 14           % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|P83678|PHAP_DELAC | 0.11    | 26           % | Yes             | Remote homolog? (Shared Pfam)
+2    | sp|O75879|GATB_HUMAN | 0.84    | 10           % | No              | Potential False Positive
+3    | sp|B7K2S1|ARLY_RIPO1 | 0.60    | 15           % | No              | Potential False Positive
+4    | sp|Q9C6S6|PPR67_ARATH | 0.37    | 22           % | Yes             | Remote homolog? (Shared Pfam)
+5    | sp|Q53462|AEPH_PECCC | 0.84    | 6            % | No              | Potential False Positive
+6    | sp|A6U3V7|RL30_STAA2 | 0.58    | 12           % | No              | Potential False Positive
+7    | sp|Q04170|YD391_YEAST | 0.31    | 77           % | Yes             | --
+8    | sp|P54012|RS15_METJA | 0.63    | 10           % | No              | Potential False Positive
+9    | sp|B5FG84|HFLD_ALIFM | 0.60    | 13           % | No              | Potential False Positive
+10   | sp|B1WZM0|METK_CROS5 | 0.80    | 9            % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|C0RLC0|PYRB_BRUMB | 0.14    | 29           % | Yes             | Remote homolog? (Shared Pfam)
+2    | sp|A7ZQJ1|ISPD_ECO24 | 0.86    | 8            % | No              | Potential False Positive
+3    | sp|P31118|MTC2_PBCV1 | 0.45    | 7            % | No              | Potential False Positive
+4    | sp|Q6AYB3|ISY1_RAT | 0.52    | 6            % | No              | Potential False Positive
+5    | sp|Q92BZ0|DXS_LISIN | 0.59    | 7            % | No              | Potential False Positive
+6    | sp|Q6FQU2|CMR1_CANGA | 0.38    | 50           % | Yes             | --
+7    | sp|A6V0T2|AMPA_PSEP7 | 0.81    | 6            % | No              | Potential False Positive
+8    | sp|Q5UQ19|YR198_MIMIV | 0.31    | 87           % | Yes             | --
+9    | sp|Q6LA17|MATK_BOWVO | 0.59    | 12           % | No              | Potential False Positive
+10   | sp|B1I959|LUXS_STRPI | 0.61    | 10           % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q8HXP9|SODC_SAPAP | 0.40    | 80           % | Yes             | --
+2    | sp|Q1KVR3|RR8_TETOB | 0.55    | 7            % | No              | Potential False Positive
+3    | sp|A4TMM7|Y2162_YERPP | 0.43    | 14           % | No              | Potential False Positive
+4    | sp|Q5PKS6|IBPB_SALPA | 0.49    | 15           % | No              | Potential False Positive
+5    | sp|Q50000|DXS_MYCLE | 0.82    | 10           % | No              | Potential False Positive
+6    | sp|Q6PAT0|ADAT3_MOUSE | 0.57    | 6            % | No              | Potential False Positive
+7    | sp|B5XNA2|RL29_KLEP3 | 0.55    | 6            % | No              | Potential False Positive
+8    | sp|Q03YU3|RPOE_LEUMM | 0.62    | 14           % | No              | Potential False Positive
+9    | sp|P0A8P4|FETP_ECO57 | 0.86    | 12           % | No              | Potential False Positive
+10   | sp|P63859|CAPA_STAAN | 0.49    | 11           % | No              | Potential False Positive
+
+
+================================================================================
+
+Query Protein: A0A010Q8R4
+N = 50 (size of Top-N list for Recall@N evaluation)
+[1] Summary of Methods
+----------------------------------------------------------------------
+Method          | Time/query (s) | QPS   | Recall@N vs BLAST Top-N
+----------------------------------------------------------------------
+Euclidean LSH   | 0.020          | 50.0  | 0.20
+Hypercube       | 0.030          | 33.3  | 0.16
+IVF-Flat        | 0.008          | 125.0 | 0.21
+IVF-PQ          | 0.005          | 200.0 | 0.18
+Neural LSH      | 0.010          | 100.0 | 0.23
+BLAST (Ref)     | 1.500          | 0.7   | 1.00 (defines Top-N)
+----------------------------------------------------------------------
+[2] Top-N neighbors per method (N=10 for print)
+Method: Euclidean LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|A4FZB0|PUR2_METM5 | 0.74    | 5            % | No              | Potential False Positive
+2    | sp|A8MVW0|F1712_HUMAN | 0.20    | 69           % | Yes             | --
+3    | sp|Q7VTD0|RL2_BORPE | 0.15    | 84           % | Yes             | --
+4    | sp|P0DTS0|APOA4_MIRAN | 0.73    | 14           % | No              | Potential False Positive
+5    | sp|A8AL22|RHAT_CITK8 | 0.10    | 36           % | Yes             | --
+6    | sp|Q49YH9|TRMB_STAS1 | 0.42    | 12           % | No              | Potential False Positive
+7    | sp|Q8ZM98|KDUI_SALTY | 0.52    | 9            % | No              | Potential False Positive
+8    | sp|O84843|SYFA_CHLTR | 0.44    | 8            % | No              | Potential False Positive
+9    | sp|A9VU85|RL32_BACMK | 0.29    | 43           % | Yes             | --
+10   | sp|P0C000|ARLR_STAAM | 0.64    | 11           % | No              | Potential False Positive
+
+Method: Hypercube
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|B6IZ19|AHPD_COXB2 | 0.40    | 15           % | No              | Potential False Positive
+2    | sp|Q69S81|PPCS1_ORYSJ | 0.61    | 13           % | No              | Potential False Positive
+3    | sp|A0A0B4J274|TVA20_HUMAN | 0.89    | 15           % | No              | Potential False Positive
+4    | sp|C1CL11|PYRB_STRZP | 0.54    | 11           % | No              | Potential False Positive
+5    | sp|A9AB97|MSRA_METM6 | 0.37    | 78           % | Yes             | --
+6    | sp|Q9ERG2|STRN3_MOUSE | 0.49    | 6            % | No              | Potential False Positive
+7    | sp|A8GQV5|RS12_RICRS | 0.18    | 77           % | Yes             | --
+8    | sp|Q57H01|PSIE_SALCH | 0.53    | 9            % | No              | Potential False Positive
+9    | sp|B9KAQ7|GLYA_THENN | 0.64    | 11           % | No              | Potential False Positive
+10   | sp|P46195|KGUA_BOVIN | 0.71    | 10           % | No              | Potential False Positive
+
+Method: IVF-Flat
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|C0HKH1|CYC6_CHACT | 0.55    | 6            % | No              | Potential False Positive
+2    | sp|B8F3G3|CMOA_GLAP5 | 0.11    | 34           % | Yes             | Remote homolog? (Shared Pfam)
+3    | sp|B7N6C8|HCAB_ECOLU | 0.78    | 12           % | No              | Potential False Positive
+4    | sp|B3NPZ0|UFC1_DROER | 0.71    | 13           % | No              | Potential False Positive
+5    | sp|B2TKP6|SELD_CLOBB | 0.19    | 22           % | Yes             | Remote homolog? (Shared Pfam)
+6    | sp|F5CPF0|PA226_MICAT | 0.13    | 29           % | Yes             | Remote homolog? (Shared Pfam)
+7    | sp|Q1JFB9|GATA_STRPD | 0.67    | 6            % | No              | Potential False Positive
+8    | sp|A0LJK2|MUTL_SYNFM | 0.52    | 8            % | No              | Potential False Positive
+9    | sp|Q8DAM3|TOLB_VIBVU | 0.37    | 45           % | Yes             | --
+10   | sp|C1DMY5|GSA_AZOVD | 0.89    | 6            % | No              | Potential False Positive
+
+Method: IVF-PQ
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q65YX0|SFNF_PSEPU | 0.57    | 7            % | No              | Potential False Positive
+2    | sp|A1WVB2|RL14_HALHL | 0.42    | 13           % | No              | Potential False Positive
+3    | sp|Q08245|ZEO1_YEAST | 0.88    | 10           % | No              | Potential False Positive
+4    | sp|Q3Z300|LOLD_SHISS | 0.78    | 6            % | No              | Potential False Positive
+5    | sp|B4SGR9|AROQ_PELPB | 0.58    | 9            % | No              | Potential False Positive
+6    | sp|Q7VTD0|RL2_BORPE | 0.22    | 37           % | Yes             | --
+7    | sp|Q9US40|YFZ1_SCHPO | 0.66    | 7            % | No              | Potential False Positive
+8    | sp|Q6M0L3|TBP_METMP | 0.60    | 5            % | No              | Potential False Positive
+9    | sp|Q46KV4|TPIS_PROMT | 0.24    | 25           % | Yes             | Remote homolog? (Shared Pfam)
+10   | sp|Q0T9N7|FRDC_ECOL5 | 0.57    | 6            % | No              | Potential False Positive
+
+Method: Neural LSH
+Rank | Neighbor ID | L2 Dist | BLAST Identity | In BLAST Top-N? | Bio comment
+-----------------------------------------------------------------------------
+1    | sp|Q7RWZ7|RM49_NEUCR | 0.43    | 12           % | No              | Potential False Positive
+2    | sp|A2RM32|FABH_LACLM | 0.68    | 10           % | No              | Potential False Positive
+3    | sp|Q8P5M6|HPPA_XANCP | 0.77    | 10           % | No              | Potential False Positive
+4    | sp|Q1J822|ERA_STRPF | 0.81    | 5            % | No              | Potential False Positive
+5    | sp|A9S848|CSPL7_PHYPA | 0.58    | 11           % | No              | Potential False Positive
+6    | sp|P13744|11SB_CUCMA | 0.48    | 9            % | No              | Potential False Positive
+7    | sp|P62598|ARR12_ARATH | 0.63    | 6            % | No              | Potential False Positive
+8    | sp|A6LEH5|RL18_PARD8 | 0.78    | 8            % | No              | Potential False Positive
+9    | sp|Q1WRY7|COAA_LIGS1 | 0.71    | 10           % | No              | Potential False Positive
+10   | sp|B3PNT8|YACG_RHIE6 | 0.43    | 13           % | No              | Potential False Positive
+
+
+================================================================================
+
