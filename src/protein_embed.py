@@ -27,7 +27,7 @@ def load_fasta(fasta_file):
             sequences.append("".join(seq_buffer))
     return ids, sequences
 
-def generate_embeddings(model_name, fasta_file, output_dir, batch_size=1):
+def generate_embeddings(model_name, fasta_file, output_file, batch_size=1):
     print(f"Loading model: {model_name}")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name)
@@ -44,7 +44,10 @@ def generate_embeddings(model_name, fasta_file, output_dir, batch_size=1):
 
     embeddings = []
     
-    os.makedirs(output_dir, exist_ok=True)
+    # Ensure output directory exists
+    output_dir = os.path.dirname(output_file)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
     
     with torch.no_grad():
         for i in tqdm(range(0, len(sequences), batch_size)):
@@ -79,34 +82,33 @@ def generate_embeddings(model_name, fasta_file, output_dir, batch_size=1):
 
     all_embeddings = np.concatenate(embeddings, axis=0)
     
-
-
-    base_name = os.path.basename(fasta_file).split('.')[0]
-    
     # Save as .dat (fvecs format)
-    dat_path = os.path.join(output_dir, f"{base_name}.dat")
-    print(f"Saving to {dat_path}...")
-    with open(dat_path, "wb") as f:
+    print(f"Saving to {output_file}...")
+    with open(output_file, "wb") as f:
         dim = all_embeddings.shape[1]
         for vec in all_embeddings:
             f.write(struct.pack('<i', dim))
             f.write(vec.astype('<f4').tobytes())
-    print(f"Saved dat file to {dat_path}")
+    print(f"Saved dat file to {output_file}")
     
-    # Save IDs as well for reference
-    with open(os.path.join(output_dir, f"{base_name}_ids.txt"), 'w') as f:
+    # Save IDs as well for reference (output_file + _ids.txt)
+    # If output_file is "data/vectors.dat", ids will be "data/vectors_ids.txt"
+    base_output = os.path.splitext(output_file)[0]
+    ids_file = f"{base_output}_ids.txt"
+    with open(ids_file, 'w') as f:
         for seq_id in ids:
             f.write(f"{seq_id}\n")
+    print(f"Saved IDs to {ids_file}")
 
     return all_embeddings
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate protein embeddings using ESM-2")
-    parser.add_argument("--fasta", type=str, required=True, help="Input FASTA file")
-    parser.add_argument("--output", type=str, default="embeddings_output", help="Output directory")
+    parser.add_argument("-i", "--input", type=str, required=True, help="Input FASTA file")
+    parser.add_argument("-o", "--output", type=str, required=True, help="Output .dat file")
     parser.add_argument("--model", type=str, default="facebook/esm2_t6_8M_UR50D", help="Hugging Face model name")
     parser.add_argument("--batch_size", type=int, default=8, help="Batch size")
     
     args = parser.parse_args()
     
-    generate_embeddings(args.model, args.fasta, args.output, args.batch_size)
+    generate_embeddings(args.model, args.input, args.output, args.batch_size)

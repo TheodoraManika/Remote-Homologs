@@ -153,9 +153,67 @@ def cmd_search(args):
     else:
         print("Warning: BLAST results not found. Report will lack BLAST identity info.")
 
-    # Add BLAST stats dummy entry for summary table
-    blast_time = blast.get_time_per_query() if blast.get_execution_time() else 1.5
-    blast_qps = blast.get_queries_per_second() if blast.get_execution_time() else 0.7
+    # Adding BLAST stats to list
+    blast_time = blast.get_time_per_query() if blast.get_execution_time() else 0.0
+    blast_qps = blast.get_queries_per_second() if blast.get_execution_time() else 0.0
+    
+    # --- Re-calculate Recall vs BLAST ---
+    print("\n[Calculating Recall vs BLAST Ground Truth]")
+    
+    # Store BLAST results for quick access
+    # Map query_id -> set of true neighbor IDs (Top-N for N_metrics)
+    blast_ground_truth_map = {}
+    
+    # Iterate over all queries (or indices if no IDs) to build GT map
+    # We must do this for all queries to compute average recall correctly
+    total_queries_for_avg = len(query_ids) if query_ids else 0 # or just iterate indices known
+    
+    # Pre-fetch BLAST GT for all queries
+    for idx_q, q_id in enumerate(query_ids):
+        # Top-N set from BLAST
+        blast_set = blast.get_ground_truth_set(q_id, top_n=N_metrics)
+        blast_ground_truth_map[q_id] = blast_set
+
+    # Update stats for each method
+    for method_stat in all_methods_stats:
+        m_name = method_stat['name']
+        
+        total_recall = 0.0
+        queries_counted = 0
+        
+        # Iterate over all queries we have results for
+        # Note: all_methods_neighbors structure: { q_id: { method_name: [list of neighbors] } }
+        for q_id, methods_map in all_methods_neighbors.items():
+            if m_name in methods_map:
+                neighbors = methods_map[m_name] # list of {id, distance}
+                
+                # Get BLAST GT
+                gt_set = blast_ground_truth_map.get(q_id, set())
+                
+                if not gt_set:
+                    continue # Skip if no ground truth (recall undefined or 0? 0 is safer)
+                
+                # Compute intersection
+                # We check first N neighbors
+                intersection = 0
+                for rank, n in enumerate(neighbors):
+                    if rank >= N_metrics: break
+                    if n['id'] in gt_set:
+                        intersection += 1
+                
+                recall = intersection / N_metrics
+                total_recall += recall
+                queries_counted += 1
+        
+        # Update the stat
+        if queries_counted > 0:
+            avg_recall = total_recall / queries_counted
+            method_stat['recall'] = avg_recall
+            print(f"Updated Recall for {m_name}: {avg_recall:.4f} (vs BLAST)")
+        else:
+             method_stat['recall'] = 0.0
+
+    # Add BLAST reference row
     all_methods_stats.append({
         "name": "BLAST (Ref)",
         "time_per_query": blast_time,
@@ -194,29 +252,49 @@ def cmd_search(args):
 
 def main():
     parser = argparse.ArgumentParser(description="Remote Homolog Search Pipeline")
+    
+    # We want to support both subcommands and direct arguments
+    # Create a parent parser for common args if valid, or just parse all
+    
+    # Subparsers for explicit commands
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
     
-    # Compile
+    # Compile Subcommand
     parser_compile = subparsers.add_parser("compile", help="Compile C++ backend")
     
-    # Search
-    parser_search = subparsers.add_parser("search", help="Run search algorithms and comparison")
-    parser_search.add_argument("--dataset", help="Path to .dat dataset file")
-    parser_search.add_argument("--query", help="Path to .dat query file")
-    parser_search.add_argument("--dataset_ids", help="Path to dataset IDs txt")
-    parser_search.add_argument("--query_ids", help="Path to query IDs txt")
-    parser_search.add_argument("--method", default="all", choices=["all", "lsh", "hypercube", "ivfflat", "ivfpq"], help="Algorithm to run")
-    parser_search.add_argument("--N", type=int, default=50, help="Top-N for Recall evaluation")
-    parser_search.add_argument("--limit", type=int, default=5, help="Number of queries to report")
-
+    # Search Subcommand (also default behavior)
+    # We can add arguments to the top-level parser too, but to avoid conflicts/confusion
+    # let's try to add them to top level to match "python protein_search.py -d ..."
+    
+    parser.add_argument("-d", "--dataset", help="Path to .dat dataset file")
+    parser.add_argument("-q", "--query", help="Path to .dat query file or FASTA file")
+    parser.add_argument("-o", "--output", default="results.txt", help="Output file path")
+    parser.add_argument("-method", "--method", default="all", choices=["all", "lsh", "hypercube", "ivfflat", "ivfpq"], help="Algorithm to run")
+    
+    # ID files (optional, can be inferred)
+    parser.add_argument("--dataset_ids", help="Path to dataset IDs txt")
+    parser.add_argument("--query_ids", help="Path to query IDs txt")
+    
+    parser.add_argument("--N", type=int, default=50, help="Top-N for Recall evaluation")
+    parser.add_argument("--limit", type=int, default=5, help="Number of queries to report")
+    
     args = parser.parse_args()
     
+    # Determine command
     if args.command == "compile":
         cmd_compile(args)
-    elif args.command == "search":
-        cmd_search(args)
     else:
-        parser.print_help()
+        # Default to search if no command or explicit args used
+        # We need to check if compilation is requested via some other way? No, explicit subcommand 'compile' covers it.
+        # So if we are here, we try search.
+        
+        # If no arguments provided at all, print help
+        if len(sys.argv) == 1:
+            parser.print_help()
+            sys.exit(0)
+            
+        cmd_search(args)
+
 
 if __name__ == "__main__":
     main()
