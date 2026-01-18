@@ -1,15 +1,3 @@
-"""
-Neural-LSH Search Script
-=========================
-Υπεύθυνο για την αναζήτηση k-NN χρησιμοποιώντας το εκπαιδευμένο μοντέλο και το ευρετήριο.
-
-Modular Architecture:
-  - search_algorithms.py: Core search operations (4-step algorithm)
-  - search_io.py: Data loading and result saving
-  - search_output.py: Statistics and logging
-  - nlsh_search.py: Main entry point and orchestration
-"""
-
 import sys
 import time
 import numpy as np
@@ -31,7 +19,7 @@ def main():
     
     # Ορισμός seed για αναπαραγωγιμότητα
     np.random.seed(args.seed)
-    import torch
+    import torch # type: ignore
     torch.manual_seed(args.seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed(args.seed)

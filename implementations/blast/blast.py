@@ -1,33 +1,4 @@
 #!/usr/bin/env python3
-"""
-BLAST Wrapper for Protein Homolog Search
-Interfaces with NCBI blastp executable to find remote homologs in SwissProt database
-
-Key BLAST Output Columns Used:
-================================
-1. evalue (Expect Value)
-   - Filter: Remove E-value > 0.01 (noise threshold)
-   - Statistically significant hits only
-   
-2. bitscore (Alignment Quality Score)
-   - Sort: Descending order (higher = better)
-   - Provides Top-N ranking by alignment quality
-   
-3. pident (Percent Identity)
-   - Categorize results:
-     * >= 30%: High-confidence homologs
-     * 20-30%: Twilight Zone (remote homologs, BLAST weak signal)
-     * < 20%: Below detection threshold (BLAST typically fails)
-
-Processing Pipeline:
-====================
-Step 1: Load blast_results.tsv (from -outfmt 6)
-Step 2: Filter by evalue (> 0.01 removed)
-Step 3: Sort by bitscore (descending)
-Step 4: Select Top-N → Ground Truth set SBLAST
-Step 5: Classify by pident for analysis
-"""
-
 import subprocess
 import os
 import json

@@ -1,10 +1,10 @@
-import torch
-from transformers import AutoTokenizer, AutoModel
+import torch  # type: ignore
+from transformers import AutoTokenizer, AutoModel  # type: ignore
 import argparse
 import os
-from tqdm import tqdm
+from tqdm import tqdm  # type: ignore
 import struct
-import numpy as np
+import numpy as np  # type: ignore
 
 def load_fasta(fasta_file):
     sequences = []

@@ -1,41 +1,30 @@
-"""
-Neural-LSH Build Script
-========================
-Υπεύθυνο για την κατασκευή του ευρετηρίου (training and indexing phase).
 
-Βήματα:
-1. Φόρτωση και Προεπεξεργασία Δεδομένων
-2. Κατασκευή Γράφου k-NN (με αποθήκευση στο φάκελο graph)
-3. Διαμέριση Γράφου με KaHIP
-4. Εκπαίδευση MLP
-5. Αποθήκευση Μοντέλου και Ευρετηρίου (ενοποιημένο αρχείο inverted file)
-"""
 
 import os
-import numpy as np
-import torch
-import torch.nn as nn
-import torch.optim as optim
 import sys
-from typing import Dict, Set, Tuple, Optional
-from pathlib import Path
-import struct
 import pickle
+import struct
+from pathlib import Path
+from typing import Dict, Set, Tuple, Optional
+
+import numpy as np  # type: ignore
+import torch  # type: ignore
+import torch.nn as nn  # type: ignore
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Clean imports using standard Python paths
-from dataparser.sift_parser import SIFTParser
-from dataparser.mnist_parser import MNISTParser
-from utils.args import parse_and_validate_build_args, print_build_summary
-from build.index_model.mlp_model import NeuralLSH_MLP
-from build.index_model.index_builder import build_index_with_kahip
-from build.graph.graph_build import GraphBuilder, graph_cache_exists, get_graph_cache_path
-from search.search_input import load_data  # Use shared data loading function
+from dataparser.sift_parser import SIFTParser  # type: ignore
+from dataparser.mnist_parser import MNISTParser  # type: ignore
+from utils.args import parse_and_validate_build_args, print_build_summary  # type: ignore
+from build.index_model.mlp_model import NeuralLSH_MLP  # type: ignore
+from build.index_model.index_builder import build_index_with_kahip  # type: ignore
+from build.graph.graph_build import GraphBuilder, graph_cache_exists, get_graph_cache_path  # type: ignore
+from search.search_input import load_data  # type: ignore
 
 try:
-    import kahip
+    import kahip  # type: ignore
     KAHIP_AVAILABLE = True
 except ImportError:
     KAHIP_AVAILABLE = False
@@ -244,6 +233,7 @@ def main():
     
     # Ορισμός κριτηρίου απώλειας και βελτιστοποιητή
     criterion = nn.CrossEntropyLoss()
+    import torch.optim as optim  # type: ignore
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
     
     # Μετατροπή δεδομένων σε PyTorch tensors
