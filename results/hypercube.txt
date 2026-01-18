@@ -1,0 +1,1230 @@
+Hypercube
+Query: 0
+Nearest neighbor-1: 777
+distanceApproximate: 29.242271
+Nearest neighbor-2: 144
+distanceApproximate: 30.264257
+Nearest neighbor-3: 289
+distanceApproximate: 31.004505
+Nearest neighbor-4: 130
+distanceApproximate: 31.026495
+Nearest neighbor-5: 169
+distanceApproximate: 31.073538
+Nearest neighbor-6: 447
+distanceApproximate: 31.588572
+Nearest neighbor-7: 385
+distanceApproximate: 31.591871
+Nearest neighbor-8: 1015
+distanceApproximate: 31.780619
+Nearest neighbor-9: 429
+distanceApproximate: 31.842270
+Nearest neighbor-10: 475
+distanceApproximate: 31.893795
+Nearest neighbor-11: 278
+distanceApproximate: 31.943609
+Nearest neighbor-12: 553
+distanceApproximate: 32.209450
+Nearest neighbor-13: 88
+distanceApproximate: 32.280106
+Nearest neighbor-14: 489
+distanceApproximate: 32.767227
+Nearest neighbor-15: 605
+distanceApproximate: 32.804733
+Nearest neighbor-16: 296
+distanceApproximate: 33.058876
+Nearest neighbor-17: 729
+distanceApproximate: 33.154556
+Nearest neighbor-18: 308
+distanceApproximate: 33.320221
+Nearest neighbor-19: 91
+distanceApproximate: 33.454136
+Nearest neighbor-20: 485
+distanceApproximate: 33.462166
+Nearest neighbor-21: 59
+distanceApproximate: 33.525021
+Nearest neighbor-22: 354
+distanceApproximate: 33.533058
+Nearest neighbor-23: 40
+distanceApproximate: 33.672718
+Nearest neighbor-24: 55
+distanceApproximate: 33.677139
+Nearest neighbor-25: 303
+distanceApproximate: 33.704426
+Nearest neighbor-26: 122
+distanceApproximate: 33.717964
+Nearest neighbor-27: 425
+distanceApproximate: 33.789993
+Nearest neighbor-28: 731
+distanceApproximate: 33.801807
+Nearest neighbor-29: 152
+distanceApproximate: 33.994740
+Nearest neighbor-30: 1084
+distanceApproximate: 33.998482
+Nearest neighbor-31: 720
+distanceApproximate: 34.022270
+Nearest neighbor-32: 377
+distanceApproximate: 34.072426
+Nearest neighbor-33: 795
+distanceApproximate: 34.090660
+Nearest neighbor-34: 842
+distanceApproximate: 34.264957
+Nearest neighbor-35: 224
+distanceApproximate: 34.272919
+Nearest neighbor-36: 1030
+distanceApproximate: 34.281578
+Nearest neighbor-37: 1081
+distanceApproximate: 34.293850
+Nearest neighbor-38: 533
+distanceApproximate: 34.372005
+Nearest neighbor-39: 578
+distanceApproximate: 34.380638
+Nearest neighbor-40: 654
+distanceApproximate: 34.485130
+Nearest neighbor-41: 143
+distanceApproximate: 34.518974
+Nearest neighbor-42: 225
+distanceApproximate: 34.561348
+Nearest neighbor-43: 585
+distanceApproximate: 34.582657
+Nearest neighbor-44: 189
+distanceApproximate: 34.622520
+Nearest neighbor-45: 971
+distanceApproximate: 34.652050
+Nearest neighbor-46: 843
+distanceApproximate: 34.706425
+Nearest neighbor-47: 796
+distanceApproximate: 34.706936
+Nearest neighbor-48: 103
+distanceApproximate: 34.725903
+Nearest neighbor-49: 494
+distanceApproximate: 34.998260
+Nearest neighbor-50: 105
+distanceApproximate: 35.021736
+R-near neighbors:
+Query: 1
+Nearest neighbor-1: 777
+distanceApproximate: 29.380880
+Nearest neighbor-2: 144
+distanceApproximate: 30.262060
+Nearest neighbor-3: 130
+distanceApproximate: 30.703217
+Nearest neighbor-4: 169
+distanceApproximate: 30.875755
+Nearest neighbor-5: 289
+distanceApproximate: 31.044079
+Nearest neighbor-6: 429
+distanceApproximate: 31.716700
+Nearest neighbor-7: 1015
+distanceApproximate: 31.724846
+Nearest neighbor-8: 385
+distanceApproximate: 31.732105
+Nearest neighbor-9: 475
+distanceApproximate: 31.750246
+Nearest neighbor-10: 447
+distanceApproximate: 31.803215
+Nearest neighbor-11: 278
+distanceApproximate: 32.026630
+Nearest neighbor-12: 88
+distanceApproximate: 32.389694
+Nearest neighbor-13: 553
+distanceApproximate: 32.457169
+Nearest neighbor-14: 605
+distanceApproximate: 32.648911
+Nearest neighbor-15: 489
+distanceApproximate: 32.801346
+Nearest neighbor-16: 296
+distanceApproximate: 33.041084
+Nearest neighbor-17: 91
+distanceApproximate: 33.129745
+Nearest neighbor-18: 308
+distanceApproximate: 33.136803
+Nearest neighbor-19: 729
+distanceApproximate: 33.199532
+Nearest neighbor-20: 59
+distanceApproximate: 33.399956
+Nearest neighbor-21: 354
+distanceApproximate: 33.448746
+Nearest neighbor-22: 40
+distanceApproximate: 33.478535
+Nearest neighbor-23: 485
+distanceApproximate: 33.488682
+Nearest neighbor-24: 303
+distanceApproximate: 33.587391
+Nearest neighbor-25: 122
+distanceApproximate: 33.739719
+Nearest neighbor-26: 795
+distanceApproximate: 33.759159
+Nearest neighbor-27: 55
+distanceApproximate: 33.775902
+Nearest neighbor-28: 731
+distanceApproximate: 33.800350
+Nearest neighbor-29: 425
+distanceApproximate: 33.804962
+Nearest neighbor-30: 152
+distanceApproximate: 33.811047
+Nearest neighbor-31: 1084
+distanceApproximate: 34.040737
+Nearest neighbor-32: 720
+distanceApproximate: 34.091061
+Nearest neighbor-33: 1081
+distanceApproximate: 34.093414
+Nearest neighbor-34: 377
+distanceApproximate: 34.139904
+Nearest neighbor-35: 842
+distanceApproximate: 34.167744
+Nearest neighbor-36: 578
+distanceApproximate: 34.243443
+Nearest neighbor-37: 224
+distanceApproximate: 34.271721
+Nearest neighbor-38: 1030
+distanceApproximate: 34.316055
+Nearest neighbor-39: 533
+distanceApproximate: 34.407532
+Nearest neighbor-40: 225
+distanceApproximate: 34.417980
+Nearest neighbor-41: 971
+distanceApproximate: 34.461430
+Nearest neighbor-42: 143
+distanceApproximate: 34.550911
+Nearest neighbor-43: 585
+distanceApproximate: 34.591240
+Nearest neighbor-44: 654
+distanceApproximate: 34.609116
+Nearest neighbor-45: 796
+distanceApproximate: 34.681580
+Nearest neighbor-46: 189
+distanceApproximate: 34.699913
+Nearest neighbor-47: 103
+distanceApproximate: 34.704544
+Nearest neighbor-48: 843
+distanceApproximate: 34.720032
+Nearest neighbor-49: 847
+distanceApproximate: 34.917614
+Nearest neighbor-50: 494
+distanceApproximate: 34.924034
+R-near neighbors:
+Query: 2
+Nearest neighbor-1: 223
+distanceApproximate: 25.482302
+Nearest neighbor-2: 916
+distanceApproximate: 28.039062
+Nearest neighbor-3: 48
+distanceApproximate: 30.354553
+Nearest neighbor-4: 380
+distanceApproximate: 30.902346
+Nearest neighbor-5: 1007
+distanceApproximate: 31.028755
+Nearest neighbor-6: 42
+distanceApproximate: 31.985832
+Nearest neighbor-7: 283
+distanceApproximate: 31.999886
+Nearest neighbor-8: 469
+distanceApproximate: 32.377937
+Nearest neighbor-9: 923
+distanceApproximate: 33.027557
+Nearest neighbor-10: 442
+distanceApproximate: 33.139904
+Nearest neighbor-11: 653
+distanceApproximate: 33.145710
+Nearest neighbor-12: 680
+distanceApproximate: 33.324615
+Nearest neighbor-13: 61
+distanceApproximate: 33.514374
+Nearest neighbor-14: 978
+distanceApproximate: 33.548092
+Nearest neighbor-15: 721
+distanceApproximate: 33.789314
+Nearest neighbor-16: 204
+distanceApproximate: 34.060055
+Nearest neighbor-17: 683
+distanceApproximate: 34.113079
+Nearest neighbor-18: 74
+distanceApproximate: 34.618980
+Nearest neighbor-19: 720
+distanceApproximate: 34.640057
+Nearest neighbor-20: 659
+distanceApproximate: 34.800213
+Nearest neighbor-21: 389
+distanceApproximate: 35.268772
+Nearest neighbor-22: 191
+distanceApproximate: 35.351337
+Nearest neighbor-23: 292
+distanceApproximate: 35.565918
+Nearest neighbor-24: 1001
+distanceApproximate: 35.657223
+Nearest neighbor-25: 402
+distanceApproximate: 35.720097
+Nearest neighbor-26: 527
+distanceApproximate: 35.838879
+Nearest neighbor-27: 634
+distanceApproximate: 35.968494
+Nearest neighbor-28: 631
+distanceApproximate: 36.004902
+Nearest neighbor-29: 177
+distanceApproximate: 36.040974
+Nearest neighbor-30: 106
+distanceApproximate: 36.061192
+Nearest neighbor-31: 1088
+distanceApproximate: 36.116131
+Nearest neighbor-32: 770
+distanceApproximate: 36.380104
+Nearest neighbor-33: 847
+distanceApproximate: 36.456692
+Nearest neighbor-34: 381
+distanceApproximate: 36.526306
+Nearest neighbor-35: 358
+distanceApproximate: 36.528423
+Nearest neighbor-36: 372
+distanceApproximate: 36.562145
+Nearest neighbor-37: 153
+distanceApproximate: 36.582661
+Nearest neighbor-38: 614
+distanceApproximate: 36.768295
+Nearest neighbor-39: 732
+distanceApproximate: 36.802258
+Nearest neighbor-40: 419
+distanceApproximate: 36.841690
+Nearest neighbor-41: 56
+distanceApproximate: 36.993778
+Nearest neighbor-42: 761
+distanceApproximate: 37.069126
+Nearest neighbor-43: 401
+distanceApproximate: 37.164894
+Nearest neighbor-44: 496
+distanceApproximate: 37.314617
+Nearest neighbor-45: 755
+distanceApproximate: 37.417690
+Nearest neighbor-46: 413
+distanceApproximate: 37.454288
+Nearest neighbor-47: 30
+distanceApproximate: 37.504688
+Nearest neighbor-48: 1030
+distanceApproximate: 37.596527
+Nearest neighbor-49: 657
+distanceApproximate: 37.629021
+Nearest neighbor-50: 613
+distanceApproximate: 37.636356
+R-near neighbors:
+Query: 3
+Nearest neighbor-1: 223
+distanceApproximate: 27.179295
+Nearest neighbor-2: 916
+distanceApproximate: 29.385818
+Nearest neighbor-3: 48
+distanceApproximate: 29.665312
+Nearest neighbor-4: 1007
+distanceApproximate: 32.934788
+Nearest neighbor-5: 380
+distanceApproximate: 32.994488
+Nearest neighbor-6: 680
+distanceApproximate: 33.131046
+Nearest neighbor-7: 442
+distanceApproximate: 33.529190
+Nearest neighbor-8: 42
+distanceApproximate: 33.565514
+Nearest neighbor-9: 283
+distanceApproximate: 33.632553
+Nearest neighbor-10: 978
+distanceApproximate: 33.959381
+Nearest neighbor-11: 653
+distanceApproximate: 34.723011
+Nearest neighbor-12: 923
+distanceApproximate: 35.168926
+Nearest neighbor-13: 469
+distanceApproximate: 35.563049
+Nearest neighbor-14: 61
+distanceApproximate: 35.571098
+Nearest neighbor-15: 683
+distanceApproximate: 36.019058
+Nearest neighbor-16: 720
+distanceApproximate: 36.046452
+Nearest neighbor-17: 721
+distanceApproximate: 36.059509
+Nearest neighbor-18: 204
+distanceApproximate: 36.153984
+Nearest neighbor-19: 74
+distanceApproximate: 36.275242
+Nearest neighbor-20: 372
+distanceApproximate: 36.684284
+Nearest neighbor-21: 847
+distanceApproximate: 36.845982
+Nearest neighbor-22: 292
+distanceApproximate: 36.987503
+Nearest neighbor-23: 631
+distanceApproximate: 36.989883
+Nearest neighbor-24: 527
+distanceApproximate: 37.242050
+Nearest neighbor-25: 614
+distanceApproximate: 37.310078
+Nearest neighbor-26: 770
+distanceApproximate: 37.625240
+Nearest neighbor-27: 634
+distanceApproximate: 37.672909
+Nearest neighbor-28: 402
+distanceApproximate: 37.694454
+Nearest neighbor-29: 659
+distanceApproximate: 37.900486
+Nearest neighbor-30: 106
+distanceApproximate: 37.902370
+Nearest neighbor-31: 389
+distanceApproximate: 38.002670
+Nearest neighbor-32: 191
+distanceApproximate: 38.210117
+Nearest neighbor-33: 56
+distanceApproximate: 38.212837
+Nearest neighbor-34: 561
+distanceApproximate: 38.459370
+Nearest neighbor-35: 1088
+distanceApproximate: 38.557579
+Nearest neighbor-36: 358
+distanceApproximate: 38.635849
+Nearest neighbor-37: 499
+distanceApproximate: 38.635876
+Nearest neighbor-38: 238
+distanceApproximate: 38.892220
+Nearest neighbor-39: 177
+distanceApproximate: 39.045082
+Nearest neighbor-40: 436
+distanceApproximate: 39.061691
+Nearest neighbor-41: 264
+distanceApproximate: 39.086739
+Nearest neighbor-42: 761
+distanceApproximate: 39.095840
+Nearest neighbor-43: 732
+distanceApproximate: 39.117035
+Nearest neighbor-44: 1068
+distanceApproximate: 39.188950
+Nearest neighbor-45: 153
+distanceApproximate: 39.211319
+Nearest neighbor-46: 413
+distanceApproximate: 39.270355
+Nearest neighbor-47: 488
+distanceApproximate: 39.280029
+Nearest neighbor-48: 496
+distanceApproximate: 39.384312
+Nearest neighbor-49: 613
+distanceApproximate: 39.418171
+Nearest neighbor-50: 534
+distanceApproximate: 39.499870
+R-near neighbors:
+Query: 4
+Nearest neighbor-1: 847
+distanceApproximate: 27.383736
+Nearest neighbor-2: 232
+distanceApproximate: 28.489647
+Nearest neighbor-3: 532
+distanceApproximate: 28.647602
+Nearest neighbor-4: 482
+distanceApproximate: 28.896730
+Nearest neighbor-5: 203
+distanceApproximate: 29.022301
+Nearest neighbor-6: 978
+distanceApproximate: 29.439415
+Nearest neighbor-7: 955
+distanceApproximate: 29.459267
+Nearest neighbor-8: 508
+distanceApproximate: 29.517843
+Nearest neighbor-9: 634
+distanceApproximate: 29.825901
+Nearest neighbor-10: 1053
+distanceApproximate: 29.928347
+Nearest neighbor-11: 1038
+distanceApproximate: 30.526272
+Nearest neighbor-12: 372
+distanceApproximate: 30.630091
+Nearest neighbor-13: 360
+distanceApproximate: 30.757504
+Nearest neighbor-14: 753
+distanceApproximate: 30.938646
+Nearest neighbor-15: 638
+distanceApproximate: 31.073902
+Nearest neighbor-16: 618
+distanceApproximate: 31.156389
+Nearest neighbor-17: 90
+distanceApproximate: 31.280863
+Nearest neighbor-18: 1050
+distanceApproximate: 31.362791
+Nearest neighbor-19: 871
+distanceApproximate: 31.623924
+Nearest neighbor-20: 916
+distanceApproximate: 31.725790
+Nearest neighbor-21: 292
+distanceApproximate: 31.894644
+Nearest neighbor-22: 91
+distanceApproximate: 31.936853
+Nearest neighbor-23: 795
+distanceApproximate: 31.961393
+Nearest neighbor-24: 538
+distanceApproximate: 31.972298
+Nearest neighbor-25: 756
+distanceApproximate: 32.189667
+Nearest neighbor-26: 531
+distanceApproximate: 32.232845
+Nearest neighbor-27: 410
+distanceApproximate: 32.235256
+Nearest neighbor-28: 990
+distanceApproximate: 32.237370
+Nearest neighbor-29: 971
+distanceApproximate: 32.409355
+Nearest neighbor-30: 143
+distanceApproximate: 32.413357
+Nearest neighbor-31: 1005
+distanceApproximate: 32.508408
+Nearest neighbor-32: 954
+distanceApproximate: 32.580170
+Nearest neighbor-33: 735
+distanceApproximate: 32.584019
+Nearest neighbor-34: 264
+distanceApproximate: 32.621063
+Nearest neighbor-35: 969
+distanceApproximate: 32.718098
+Nearest neighbor-36: 500
+distanceApproximate: 32.949310
+Nearest neighbor-37: 122
+distanceApproximate: 33.012150
+Nearest neighbor-38: 998
+distanceApproximate: 33.044621
+Nearest neighbor-39: 846
+distanceApproximate: 33.064041
+Nearest neighbor-40: 625
+distanceApproximate: 33.075962
+Nearest neighbor-41: 560
+distanceApproximate: 33.096264
+Nearest neighbor-42: 430
+distanceApproximate: 33.129631
+Nearest neighbor-43: 918
+distanceApproximate: 33.312210
+Nearest neighbor-44: 357
+distanceApproximate: 33.367603
+Nearest neighbor-45: 598
+distanceApproximate: 33.482014
+Nearest neighbor-46: 187
+distanceApproximate: 33.553383
+Nearest neighbor-47: 591
+distanceApproximate: 33.574894
+Nearest neighbor-48: 306
+distanceApproximate: 33.591408
+Nearest neighbor-49: 475
+distanceApproximate: 33.598866
+Nearest neighbor-50: 348
+distanceApproximate: 33.635731
+R-near neighbors:
+Query: 5
+Nearest neighbor-1: 4153
+distanceApproximate: 13.844838
+Nearest neighbor-2: 2529
+distanceApproximate: 15.410789
+Nearest neighbor-3: 5785
+distanceApproximate: 15.490848
+Nearest neighbor-4: 1348
+distanceApproximate: 15.540597
+Nearest neighbor-5: 8044
+distanceApproximate: 16.407118
+Nearest neighbor-6: 58
+distanceApproximate: 16.882099
+Nearest neighbor-7: 8018
+distanceApproximate: 17.488806
+Nearest neighbor-8: 11042
+distanceApproximate: 17.614111
+Nearest neighbor-9: 11465
+distanceApproximate: 19.614105
+Nearest neighbor-10: 7769
+distanceApproximate: 19.672997
+Nearest neighbor-11: 2
+distanceApproximate: 19.717556
+Nearest neighbor-12: 10627
+distanceApproximate: 19.721720
+Nearest neighbor-13: 815
+distanceApproximate: 19.764761
+Nearest neighbor-14: 10650
+distanceApproximate: 19.852213
+Nearest neighbor-15: 7813
+distanceApproximate: 20.128908
+Nearest neighbor-16: 12368
+distanceApproximate: 20.175205
+Nearest neighbor-17: 3179
+distanceApproximate: 20.389166
+Nearest neighbor-18: 688
+distanceApproximate: 20.429724
+Nearest neighbor-19: 536
+distanceApproximate: 20.600626
+Nearest neighbor-20: 11794
+distanceApproximate: 20.781565
+Nearest neighbor-21: 8027
+distanceApproximate: 20.856894
+Nearest neighbor-22: 10077
+distanceApproximate: 20.999348
+Nearest neighbor-23: 541
+distanceApproximate: 21.683258
+Nearest neighbor-24: 11478
+distanceApproximate: 21.904652
+Nearest neighbor-25: 2000
+distanceApproximate: 22.276894
+Nearest neighbor-26: 1585
+distanceApproximate: 22.337435
+Nearest neighbor-27: 4164
+distanceApproximate: 22.354267
+Nearest neighbor-28: 9163
+distanceApproximate: 22.734795
+Nearest neighbor-29: 6575
+distanceApproximate: 22.817696
+Nearest neighbor-30: 11715
+distanceApproximate: 23.017534
+Nearest neighbor-31: 7998
+distanceApproximate: 23.228075
+Nearest neighbor-32: 5577
+distanceApproximate: 23.242754
+Nearest neighbor-33: 6797
+distanceApproximate: 23.569202
+Nearest neighbor-34: 11176
+distanceApproximate: 23.583036
+Nearest neighbor-35: 8663
+distanceApproximate: 23.940586
+Nearest neighbor-36: 1185
+distanceApproximate: 24.215509
+Nearest neighbor-37: 12277
+distanceApproximate: 24.253201
+Nearest neighbor-38: 11400
+distanceApproximate: 24.451492
+Nearest neighbor-39: 4648
+distanceApproximate: 24.709244
+Nearest neighbor-40: 7880
+distanceApproximate: 27.346636
+Nearest neighbor-41: 8028
+distanceApproximate: 27.405909
+Nearest neighbor-42: 6149
+distanceApproximate: 27.435162
+Nearest neighbor-43: 211
+distanceApproximate: 27.444483
+Nearest neighbor-44: 7203
+distanceApproximate: 27.532101
+Nearest neighbor-45: 5854
+distanceApproximate: 27.598734
+Nearest neighbor-46: 5217
+distanceApproximate: 27.972559
+Nearest neighbor-47: 9862
+distanceApproximate: 28.240871
+Nearest neighbor-48: 11475
+distanceApproximate: 28.324739
+Nearest neighbor-49: 599
+distanceApproximate: 28.412663
+Nearest neighbor-50: 747
+distanceApproximate: 28.414310
+R-near neighbors:
+Query: 6
+Nearest neighbor-1: 103
+distanceApproximate: 13.619780
+Nearest neighbor-2: 811
+distanceApproximate: 15.808707
+Nearest neighbor-3: 413
+distanceApproximate: 18.419159
+Nearest neighbor-4: 59
+distanceApproximate: 18.553312
+Nearest neighbor-5: 731
+distanceApproximate: 19.258602
+Nearest neighbor-6: 1081
+distanceApproximate: 19.573215
+Nearest neighbor-7: 203
+distanceApproximate: 19.657370
+Nearest neighbor-8: 306
+distanceApproximate: 19.837196
+Nearest neighbor-9: 402
+distanceApproximate: 20.343658
+Nearest neighbor-10: 124
+distanceApproximate: 20.421133
+Nearest neighbor-11: 1030
+distanceApproximate: 20.543303
+Nearest neighbor-12: 755
+distanceApproximate: 20.581383
+Nearest neighbor-13: 720
+distanceApproximate: 20.664080
+Nearest neighbor-14: 373
+distanceApproximate: 20.998383
+Nearest neighbor-15: 358
+distanceApproximate: 21.057726
+Nearest neighbor-16: 871
+distanceApproximate: 21.466343
+Nearest neighbor-17: 225
+distanceApproximate: 21.510912
+Nearest neighbor-18: 881
+distanceApproximate: 21.518835
+Nearest neighbor-19: 533
+distanceApproximate: 21.730881
+Nearest neighbor-20: 430
+distanceApproximate: 21.778154
+Nearest neighbor-21: 1063
+distanceApproximate: 21.867977
+Nearest neighbor-22: 914
+distanceApproximate: 22.004223
+Nearest neighbor-23: 429
+distanceApproximate: 22.009962
+Nearest neighbor-24: 359
+distanceApproximate: 22.126755
+Nearest neighbor-25: 1061
+distanceApproximate: 22.280035
+Nearest neighbor-26: 895
+distanceApproximate: 22.288410
+Nearest neighbor-27: 350
+distanceApproximate: 22.336178
+Nearest neighbor-28: 73
+distanceApproximate: 22.425831
+Nearest neighbor-29: 214
+distanceApproximate: 22.453728
+Nearest neighbor-30: 597
+distanceApproximate: 22.457541
+Nearest neighbor-31: 492
+distanceApproximate: 22.526899
+Nearest neighbor-32: 879
+distanceApproximate: 22.667999
+Nearest neighbor-33: 974
+distanceApproximate: 22.679983
+Nearest neighbor-34: 324
+distanceApproximate: 22.755232
+Nearest neighbor-35: 1018
+distanceApproximate: 22.803364
+Nearest neighbor-36: 248
+distanceApproximate: 22.814363
+Nearest neighbor-37: 156
+distanceApproximate: 22.816298
+Nearest neighbor-38: 364
+distanceApproximate: 22.834013
+Nearest neighbor-39: 128
+distanceApproximate: 22.864365
+Nearest neighbor-40: 981
+distanceApproximate: 22.868286
+Nearest neighbor-41: 405
+distanceApproximate: 22.969893
+Nearest neighbor-42: 319
+distanceApproximate: 22.986568
+Nearest neighbor-43: 710
+distanceApproximate: 22.995197
+Nearest neighbor-44: 143
+distanceApproximate: 22.995419
+Nearest neighbor-45: 831
+distanceApproximate: 23.000431
+Nearest neighbor-46: 258
+distanceApproximate: 23.019676
+Nearest neighbor-47: 585
+distanceApproximate: 23.047682
+Nearest neighbor-48: 23
+distanceApproximate: 23.083609
+Nearest neighbor-49: 590
+distanceApproximate: 23.087189
+Nearest neighbor-50: 1019
+distanceApproximate: 23.132116
+R-near neighbors:
+Query: 7
+Nearest neighbor-1: 103
+distanceApproximate: 15.216286
+Nearest neighbor-2: 1030
+distanceApproximate: 20.089437
+Nearest neighbor-3: 720
+distanceApproximate: 20.674139
+Nearest neighbor-4: 1081
+distanceApproximate: 20.764400
+Nearest neighbor-5: 358
+distanceApproximate: 20.863722
+Nearest neighbor-6: 811
+distanceApproximate: 21.015236
+Nearest neighbor-7: 143
+distanceApproximate: 21.302391
+Nearest neighbor-8: 413
+distanceApproximate: 21.723619
+Nearest neighbor-9: 278
+distanceApproximate: 21.837185
+Nearest neighbor-10: 373
+distanceApproximate: 21.886379
+Nearest neighbor-11: 59
+distanceApproximate: 21.904594
+Nearest neighbor-12: 731
+distanceApproximate: 22.001091
+Nearest neighbor-13: 914
+distanceApproximate: 22.272251
+Nearest neighbor-14: 422
+distanceApproximate: 22.484970
+Nearest neighbor-15: 144
+distanceApproximate: 22.487728
+Nearest neighbor-16: 88
+distanceApproximate: 22.545650
+Nearest neighbor-17: 108
+distanceApproximate: 22.946716
+Nearest neighbor-18: 755
+distanceApproximate: 23.062689
+Nearest neighbor-19: 55
+distanceApproximate: 23.144409
+Nearest neighbor-20: 492
+distanceApproximate: 23.167578
+Nearest neighbor-21: 203
+distanceApproximate: 23.205271
+Nearest neighbor-22: 1027
+distanceApproximate: 23.321260
+Nearest neighbor-23: 122
+distanceApproximate: 23.328564
+Nearest neighbor-24: 243
+distanceApproximate: 23.437340
+Nearest neighbor-25: 124
+distanceApproximate: 23.466877
+Nearest neighbor-26: 777
+distanceApproximate: 23.476408
+Nearest neighbor-27: 1015
+distanceApproximate: 23.536007
+Nearest neighbor-28: 359
+distanceApproximate: 23.548573
+Nearest neighbor-29: 289
+distanceApproximate: 23.640224
+Nearest neighbor-30: 306
+distanceApproximate: 23.692099
+Nearest neighbor-31: 336
+distanceApproximate: 23.695877
+Nearest neighbor-32: 226
+distanceApproximate: 23.719246
+Nearest neighbor-33: 842
+distanceApproximate: 23.734541
+Nearest neighbor-34: 402
+distanceApproximate: 23.759459
+Nearest neighbor-35: 192
+distanceApproximate: 24.025166
+Nearest neighbor-36: 37
+distanceApproximate: 24.099239
+Nearest neighbor-37: 881
+distanceApproximate: 24.105900
+Nearest neighbor-38: 533
+distanceApproximate: 24.131630
+Nearest neighbor-39: 324
+distanceApproximate: 24.224138
+Nearest neighbor-40: 871
+distanceApproximate: 24.260925
+Nearest neighbor-41: 1055
+distanceApproximate: 24.268570
+Nearest neighbor-42: 1063
+distanceApproximate: 24.359104
+Nearest neighbor-43: 377
+distanceApproximate: 24.481281
+Nearest neighbor-44: 130
+distanceApproximate: 24.560049
+Nearest neighbor-45: 924
+distanceApproximate: 24.579433
+Nearest neighbor-46: 895
+distanceApproximate: 24.616108
+Nearest neighbor-47: 489
+distanceApproximate: 24.617422
+Nearest neighbor-48: 623
+distanceApproximate: 24.734329
+Nearest neighbor-49: 155
+distanceApproximate: 24.788601
+Nearest neighbor-50: 248
+distanceApproximate: 24.865732
+R-near neighbors:
+Query: 8
+Nearest neighbor-1: 5854
+distanceApproximate: 20.054626
+Nearest neighbor-2: 2585
+distanceApproximate: 21.439068
+Nearest neighbor-3: 7565
+distanceApproximate: 22.376822
+Nearest neighbor-4: 10259
+distanceApproximate: 22.588638
+Nearest neighbor-5: 9680
+distanceApproximate: 23.460550
+Nearest neighbor-6: 8714
+distanceApproximate: 23.469688
+Nearest neighbor-7: 10114
+distanceApproximate: 23.496281
+Nearest neighbor-8: 512
+distanceApproximate: 23.713795
+Nearest neighbor-9: 9094
+distanceApproximate: 23.819061
+Nearest neighbor-10: 9795
+distanceApproximate: 24.228939
+Nearest neighbor-11: 211
+distanceApproximate: 24.292326
+Nearest neighbor-12: 8364
+distanceApproximate: 24.315510
+Nearest neighbor-13: 7663
+distanceApproximate: 24.471844
+Nearest neighbor-14: 1324
+distanceApproximate: 24.504644
+Nearest neighbor-15: 4064
+distanceApproximate: 24.758026
+Nearest neighbor-16: 7562
+distanceApproximate: 24.774405
+Nearest neighbor-17: 7623
+distanceApproximate: 24.998281
+Nearest neighbor-18: 1585
+distanceApproximate: 25.073738
+Nearest neighbor-19: 9132
+distanceApproximate: 25.154205
+Nearest neighbor-20: 8476
+distanceApproximate: 25.272341
+Nearest neighbor-21: 7296
+distanceApproximate: 25.316883
+Nearest neighbor-22: 6961
+distanceApproximate: 25.345903
+Nearest neighbor-23: 5746
+distanceApproximate: 25.634052
+Nearest neighbor-24: 7714
+distanceApproximate: 25.653296
+Nearest neighbor-25: 6797
+distanceApproximate: 25.715441
+Nearest neighbor-26: 938
+distanceApproximate: 25.859919
+Nearest neighbor-27: 120
+distanceApproximate: 25.892969
+Nearest neighbor-28: 5299
+distanceApproximate: 26.007288
+Nearest neighbor-29: 4076
+distanceApproximate: 26.034939
+Nearest neighbor-30: 11050
+distanceApproximate: 26.138390
+Nearest neighbor-31: 2247
+distanceApproximate: 26.181707
+Nearest neighbor-32: 5283
+distanceApproximate: 26.215120
+Nearest neighbor-33: 4346
+distanceApproximate: 26.255922
+Nearest neighbor-34: 10504
+distanceApproximate: 26.264519
+Nearest neighbor-35: 1706
+distanceApproximate: 26.309961
+Nearest neighbor-36: 12523
+distanceApproximate: 26.326628
+Nearest neighbor-37: 4354
+distanceApproximate: 26.370369
+Nearest neighbor-38: 8132
+distanceApproximate: 26.370369
+Nearest neighbor-39: 277
+distanceApproximate: 26.397928
+Nearest neighbor-40: 185
+distanceApproximate: 26.434774
+Nearest neighbor-41: 6586
+distanceApproximate: 26.508945
+Nearest neighbor-42: 9862
+distanceApproximate: 26.569834
+Nearest neighbor-43: 861
+distanceApproximate: 26.648449
+Nearest neighbor-44: 12592
+distanceApproximate: 26.708374
+Nearest neighbor-45: 11076
+distanceApproximate: 26.756880
+Nearest neighbor-46: 6706
+distanceApproximate: 26.843039
+Nearest neighbor-47: 1293
+distanceApproximate: 26.846006
+Nearest neighbor-48: 1247
+distanceApproximate: 26.912811
+Nearest neighbor-49: 579
+distanceApproximate: 26.920549
+Nearest neighbor-50: 87
+distanceApproximate: 26.941227
+R-near neighbors:
+Query: 9
+Nearest neighbor-1: 670
+distanceApproximate: 39.315216
+Nearest neighbor-2: 311
+distanceApproximate: 39.717915
+Nearest neighbor-3: 846
+distanceApproximate: 40.172665
+Nearest neighbor-4: 1017
+distanceApproximate: 40.223820
+Nearest neighbor-5: 828
+distanceApproximate: 40.399891
+Nearest neighbor-6: 527
+distanceApproximate: 40.918701
+Nearest neighbor-7: 1018
+distanceApproximate: 41.535610
+Nearest neighbor-8: 515
+distanceApproximate: 41.641094
+Nearest neighbor-9: 906
+distanceApproximate: 41.957520
+Nearest neighbor-10: 413
+distanceApproximate: 42.063225
+Nearest neighbor-11: 420
+distanceApproximate: 42.383915
+Nearest neighbor-12: 72
+distanceApproximate: 42.408623
+Nearest neighbor-13: 509
+distanceApproximate: 42.451546
+Nearest neighbor-14: 36
+distanceApproximate: 42.533379
+Nearest neighbor-15: 73
+distanceApproximate: 42.661419
+Nearest neighbor-16: 307
+distanceApproximate: 42.898647
+Nearest neighbor-17: 141
+distanceApproximate: 42.965092
+Nearest neighbor-18: 28
+distanceApproximate: 42.972641
+Nearest neighbor-19: 1042
+distanceApproximate: 43.222412
+Nearest neighbor-20: 712
+distanceApproximate: 43.261787
+Nearest neighbor-21: 728
+distanceApproximate: 43.440285
+Nearest neighbor-22: 365
+distanceApproximate: 43.467480
+Nearest neighbor-23: 1055
+distanceApproximate: 43.640354
+Nearest neighbor-24: 323
+distanceApproximate: 43.649204
+Nearest neighbor-25: 560
+distanceApproximate: 43.710545
+Nearest neighbor-26: 711
+distanceApproximate: 43.713318
+Nearest neighbor-27: 251
+distanceApproximate: 43.990799
+Nearest neighbor-28: 319
+distanceApproximate: 44.004078
+Nearest neighbor-29: 720
+distanceApproximate: 44.027439
+Nearest neighbor-30: 122
+distanceApproximate: 44.242435
+Nearest neighbor-31: 978
+distanceApproximate: 44.326164
+Nearest neighbor-32: 755
+distanceApproximate: 44.408630
+Nearest neighbor-33: 786
+distanceApproximate: 44.437931
+Nearest neighbor-34: 23
+distanceApproximate: 44.488964
+Nearest neighbor-35: 435
+distanceApproximate: 44.531952
+Nearest neighbor-36: 146
+distanceApproximate: 44.617485
+Nearest neighbor-37: 407
+distanceApproximate: 44.657356
+Nearest neighbor-38: 916
+distanceApproximate: 44.671143
+Nearest neighbor-39: 1022
+distanceApproximate: 44.751377
+Nearest neighbor-40: 710
+distanceApproximate: 44.864014
+Nearest neighbor-41: 620
+distanceApproximate: 44.872765
+Nearest neighbor-42: 934
+distanceApproximate: 44.886002
+Nearest neighbor-43: 1076
+distanceApproximate: 44.970421
+Nearest neighbor-44: 372
+distanceApproximate: 44.973000
+Nearest neighbor-45: 272
+distanceApproximate: 44.991661
+Nearest neighbor-46: 881
+distanceApproximate: 45.021847
+Nearest neighbor-47: 50
+distanceApproximate: 45.056641
+Nearest neighbor-48: 866
+distanceApproximate: 45.062840
+Nearest neighbor-49: 402
+distanceApproximate: 45.171032
+Nearest neighbor-50: 7
+distanceApproximate: 45.174377
+R-near neighbors:
+Query: 10
+Nearest neighbor-1: 1071
+distanceApproximate: 22.164352
+Nearest neighbor-2: 578
+distanceApproximate: 23.995886
+Nearest neighbor-3: 286
+distanceApproximate: 24.141123
+Nearest neighbor-4: 0
+distanceApproximate: 26.485971
+Nearest neighbor-5: 1074
+distanceApproximate: 26.624485
+Nearest neighbor-6: 359
+distanceApproximate: 27.062357
+Nearest neighbor-7: 942
+distanceApproximate: 27.238745
+Nearest neighbor-8: 924
+distanceApproximate: 27.578833
+Nearest neighbor-9: 475
+distanceApproximate: 28.352333
+Nearest neighbor-10: 563
+distanceApproximate: 28.357141
+Nearest neighbor-11: 264
+distanceApproximate: 28.483990
+Nearest neighbor-12: 533
+distanceApproximate: 28.700491
+Nearest neighbor-13: 440
+distanceApproximate: 28.858471
+Nearest neighbor-14: 306
+distanceApproximate: 28.899254
+Nearest neighbor-15: 402
+distanceApproximate: 28.987572
+Nearest neighbor-16: 1064
+distanceApproximate: 29.315657
+Nearest neighbor-17: 743
+distanceApproximate: 29.323896
+Nearest neighbor-18: 661
+distanceApproximate: 29.374914
+Nearest neighbor-19: 257
+distanceApproximate: 29.424099
+Nearest neighbor-20: 1023
+distanceApproximate: 29.432547
+Nearest neighbor-21: 1036
+distanceApproximate: 29.582262
+Nearest neighbor-22: 644
+distanceApproximate: 29.597700
+Nearest neighbor-23: 221
+distanceApproximate: 29.681456
+Nearest neighbor-24: 30
+distanceApproximate: 29.883942
+Nearest neighbor-25: 56
+distanceApproximate: 29.886902
+Nearest neighbor-26: 111
+distanceApproximate: 29.907537
+Nearest neighbor-27: 144
+distanceApproximate: 30.057812
+Nearest neighbor-28: 689
+distanceApproximate: 30.073046
+Nearest neighbor-29: 494
+distanceApproximate: 30.120117
+Nearest neighbor-30: 158
+distanceApproximate: 30.125965
+Nearest neighbor-31: 902
+distanceApproximate: 30.166727
+Nearest neighbor-32: 189
+distanceApproximate: 30.216530
+Nearest neighbor-33: 568
+distanceApproximate: 30.316622
+Nearest neighbor-34: 248
+distanceApproximate: 30.371670
+Nearest neighbor-35: 420
+distanceApproximate: 30.410543
+Nearest neighbor-36: 414
+distanceApproximate: 30.431498
+Nearest neighbor-37: 163
+distanceApproximate: 30.471279
+Nearest neighbor-38: 1098
+distanceApproximate: 30.473305
+Nearest neighbor-39: 392
+distanceApproximate: 30.562248
+Nearest neighbor-40: 718
+distanceApproximate: 30.680809
+Nearest neighbor-41: 153
+distanceApproximate: 30.769852
+Nearest neighbor-42: 823
+distanceApproximate: 30.847898
+Nearest neighbor-43: 1002
+distanceApproximate: 30.893847
+Nearest neighbor-44: 557
+distanceApproximate: 30.913542
+Nearest neighbor-45: 122
+distanceApproximate: 30.914988
+Nearest neighbor-46: 1055
+distanceApproximate: 30.917217
+Nearest neighbor-47: 327
+distanceApproximate: 30.990591
+Nearest neighbor-48: 706
+distanceApproximate: 30.999693
+Nearest neighbor-49: 835
+distanceApproximate: 31.008327
+Nearest neighbor-50: 625
+distanceApproximate: 31.050970
+R-near neighbors:
+Query: 11
+Nearest neighbor-1: 1074
+distanceApproximate: 22.434040
+Nearest neighbor-2: 578
+distanceApproximate: 23.425503
+Nearest neighbor-3: 563
+distanceApproximate: 23.572790
+Nearest neighbor-4: 359
+distanceApproximate: 23.974327
+Nearest neighbor-5: 924
+distanceApproximate: 24.315594
+Nearest neighbor-6: 497
+distanceApproximate: 24.557320
+Nearest neighbor-7: 689
+distanceApproximate: 24.598202
+Nearest neighbor-8: 1002
+distanceApproximate: 24.681944
+Nearest neighbor-9: 919
+distanceApproximate: 24.698820
+Nearest neighbor-10: 868
+distanceApproximate: 24.749542
+Nearest neighbor-11: 718
+distanceApproximate: 24.867449
+Nearest neighbor-12: 973
+distanceApproximate: 25.261459
+Nearest neighbor-13: 1083
+distanceApproximate: 25.318121
+Nearest neighbor-14: 286
+distanceApproximate: 25.774382
+Nearest neighbor-15: 931
+distanceApproximate: 25.812416
+Nearest neighbor-16: 189
+distanceApproximate: 25.982910
+Nearest neighbor-17: 501
+distanceApproximate: 26.188274
+Nearest neighbor-18: 661
+distanceApproximate: 26.278931
+Nearest neighbor-19: 414
+distanceApproximate: 26.325407
+Nearest neighbor-20: 23
+distanceApproximate: 26.350430
+Nearest neighbor-21: 533
+distanceApproximate: 26.368374
+Nearest neighbor-22: 1023
+distanceApproximate: 26.380064
+Nearest neighbor-23: 0
+distanceApproximate: 26.450075
+Nearest neighbor-24: 8
+distanceApproximate: 26.508778
+Nearest neighbor-25: 942
+distanceApproximate: 26.522282
+Nearest neighbor-26: 158
+distanceApproximate: 26.550331
+Nearest neighbor-27: 123
+distanceApproximate: 26.574850
+Nearest neighbor-28: 783
+distanceApproximate: 26.710999
+Nearest neighbor-29: 557
+distanceApproximate: 27.089575
+Nearest neighbor-30: 743
+distanceApproximate: 27.162638
+Nearest neighbor-31: 475
+distanceApproximate: 27.426683
+Nearest neighbor-32: 902
+distanceApproximate: 27.565107
+Nearest neighbor-33: 354
+distanceApproximate: 27.587461
+Nearest neighbor-34: 262
+distanceApproximate: 27.757158
+Nearest neighbor-35: 248
+distanceApproximate: 27.759144
+Nearest neighbor-36: 145
+distanceApproximate: 27.813181
+Nearest neighbor-37: 257
+distanceApproximate: 27.818714
+Nearest neighbor-38: 568
+distanceApproximate: 27.887602
+Nearest neighbor-39: 723
+distanceApproximate: 27.889076
+Nearest neighbor-40: 835
+distanceApproximate: 27.910360
+Nearest neighbor-41: 157
+distanceApproximate: 27.944044
+Nearest neighbor-42: 702
+distanceApproximate: 27.947449
+Nearest neighbor-43: 132
+distanceApproximate: 27.955051
+Nearest neighbor-44: 738
+distanceApproximate: 27.964579
+Nearest neighbor-45: 218
+distanceApproximate: 28.026924
+Nearest neighbor-46: 183
+distanceApproximate: 28.035112
+Nearest neighbor-47: 999
+distanceApproximate: 28.135454
+Nearest neighbor-48: 1071
+distanceApproximate: 28.161747
+Nearest neighbor-49: 700
+distanceApproximate: 28.193176
+Nearest neighbor-50: 617
+distanceApproximate: 28.260643
+R-near neighbors:
+Average AF: 0.000000
+Recall@N: 0.000000
+QPS: 2155.17
+tApproximateAverage: 0.000330
+tTrueAverage: 0.000000

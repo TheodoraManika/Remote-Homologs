@@ -20,7 +20,7 @@ def run_command(command, cwd=None):
 
 def compile_cpp():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    cpp_dir = os.path.join(base_dir, "implementations/Vector-Similarity-Search-Methods")
+    cpp_dir = os.path.join(base_dir, "implementations/Similarity-Search")
     
     print("\n[Compiling C++ Search Algorithms]")
     
